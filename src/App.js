@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import Cards from "./pages/sec/cards";
+import SecPage from "./pages/sec/index"
+import Pass from "./pages/sec/pass"
+import Syssec from "./pages/sec/syssec"
+
+
+//import logo from './logo.svg';
+import * as React from 'react';
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+        <Route index element={<Home />} />
+        <Route path="/blog/security" element={<SecPage />} />
+        <Route path="/blog/security/pass" element={<Pass />} />
+        <Route path="/blog/security/syssec" element={<Syssec />} />
+    </Routes>
+  </BrowserRouter>
   );
 }
 
