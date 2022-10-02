@@ -6,6 +6,7 @@ import glsl from "babel-plugin-glsl/macro";
 import "./../styling/startscreen.scss";
 import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
+import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart, FaBiking, FaMicroblog, FaYoutube, FaMusic } from 'react-icons/fa';
 //import "./../styling/sidebar.css";
 
 import useScript from './../components/hooks/useScript';
@@ -127,18 +128,18 @@ const content = [
   </div> */}
   <div style={{display: "flex", height: '100%', justifyContent: 'start'}}>
     <div >
-  <ProSidebar  collapsed = {true}>
+  <ProSidebar  collapsed = {false}>
   <Menu iconShape="square">
-    <MenuItem style = {locStyle.styles} icon={<FaGem />}>About me</MenuItem>
-    <SubMenu title="Blogs"  style = {locStyle.styles}>
+    <MenuItem style = {locStyle.styles} icon={<FaBiking />}>About me</MenuItem>
+    <SubMenu title="Blogs" icon={<FaMicroblog />}  style = {locStyle.styles}>
         <MenuItem style = {locStyle.styles}>Cyber Security</MenuItem>
         <MenuItem style = {locStyle.styles}>Machine Learning</MenuItem>
         <MenuItem style = {locStyle.styles}>Algorithmicity</MenuItem>
     </SubMenu>
-    <MenuItem style = {locStyle.styles} >YouTube</MenuItem>
-    <MenuItem style = {locStyle.styles} >GitHub</MenuItem>
+    <MenuItem icon={<FaYoutube />} style = {locStyle.styles} >YouTube</MenuItem>
+    <MenuItem style = {locStyle.styles} icon={<FaGithub />} >GitHub</MenuItem>
     
-    <MenuItem style = {locStyle.styles} >Music</MenuItem>
+    <MenuItem style = {locStyle.styles} icon={<FaMusic />} >Music</MenuItem>
   </Menu>
 </ProSidebar>
 </div>
