@@ -1,27 +1,39 @@
-import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
-import Cards from "./pages/sec/cards";
+import Start from "./pages/home";
 import SecPage from "./pages/sec/index"
 import Pass from "./pages/sec/pass"
 import Syssec from "./pages/sec/syssec"
 
-
 //import logo from './logo.svg';
 import * as React from 'react';
-import './App.css';
 
 
 function App() {
+//   var dropdown = document.getElementsByClassName("dropdown-btn");
+// var i;
+
+// for (i = 0; i < dropdown.length; i++) {
+//   dropdown[i].addEventListener("click", function() {
+//     this.classList.toggle("active");
+//     var dropdownContent = this.nextElementSibling;
+//     if (dropdownContent.style.display === "block") {
+//       dropdownContent.style.display = "none";
+//     } else {
+//       dropdownContent.style.display = "block";
+//     }
+//   });
+// }
   return (
+    <>
     <BrowserRouter>
     <Routes>
-        <Route index element={<Home />} />
+        <Route index element={<Start />} />
         <Route path="/blog/security" element={<SecPage />} />
         <Route path="/blog/security/pass" element={<Pass />} />
         <Route path="/blog/security/syssec" element={<Syssec />} />
     </Routes>
   </BrowserRouter>
+  </>
   );
 }
 
