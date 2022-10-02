@@ -29,7 +29,7 @@ const WaveShaderMaterial = shaderMaterial(
     vec3 pos = position;
     float noiseFreq = 15.5;
     float noiseAmp = 0.15; 
-    vec3 noisePos = vec3(sqrt(pos.x * pos.x + pos.y * pos.y ) * 10.0 - 3.5 * uTime, pos.y, pos.z);
+    vec3 noisePos = vec3(sqrt(pos.x * pos.x + pos.y * pos.y ) * 10.0 - 3.1 * uTime, pos.y, pos.z);
     pos.z += sin(noisePos.x) * noiseAmp;
     //pos.x += sin(sqrt(noisePos.x*noisePos.x + noisePos.y*noisePos.y)) * noiseAmp;
     gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.);
@@ -66,8 +66,8 @@ const Wave = () => {
 
 const Scene = () => {
   return (
-    <Canvas camera={{ fov: 20, position: [0, 12, 5] }}>
-      <OrbitControls target={[0.0, 0.0, 0.0]}/>
+    <Canvas camera={{ fov: 20, position: [0, 8.4, 4.2] }}>
+      <OrbitControls target={[0.0, 0.0, -0.4]}/>
       <Suspense fallback={null}>
         <Wave />
       </Suspense>
@@ -100,6 +100,12 @@ const content = [
 
 
   const Start = () => {
+    const locStyle = {
+        styles : {
+            fontFamily:'"Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
+        }
+    };
+    
     //useScript('./drop.js');
     return (
       
@@ -120,21 +126,24 @@ const content = [
     <a href="#contact">Search</a>
   </div> */}
   <div style={{display: "flex", height: '100%', justifyContent: 'start'}}>
-    <div style = {{border: '1px solid green'}}>
-  <ProSidebar>
+    <div >
+  <ProSidebar  collapsed = {true}>
   <Menu iconShape="square">
-    <MenuItem >About me</MenuItem>
-    <SubMenu title="Blogs" >
-        <MenuItem>Comp. Security</MenuItem>
-        <MenuItem>Machine Learning</MenuItem>
-        <MenuItem>Algorithmicity</MenuItem>
+    <MenuItem style = {locStyle.styles} icon={<FaGem />}>About me</MenuItem>
+    <SubMenu title="Blogs"  style = {locStyle.styles}>
+        <MenuItem style = {locStyle.styles}>Cyber Security</MenuItem>
+        <MenuItem style = {locStyle.styles}>Machine Learning</MenuItem>
+        <MenuItem style = {locStyle.styles}>Algorithmicity</MenuItem>
     </SubMenu>
-    <MenuItem >YouTube</MenuItem>
+    <MenuItem style = {locStyle.styles} >YouTube</MenuItem>
+    <MenuItem style = {locStyle.styles} >GitHub</MenuItem>
+    
+    <MenuItem style = {locStyle.styles} >Music</MenuItem>
   </Menu>
 </ProSidebar>
 </div>
-<div  style = {{border: '1px solid red', width: '100%'}}>
-        <h1 style = {{margin: 'auto', left: '50%', right: '50%'}}>AMRO A.</h1>
+<div  style = {{ width: '100%', position:'absolute', textAlign:'center', height: '100%' }}>
+        <h1 style = {{margin:'auto', verticalAlign: 'middle',  paddingLeft: '50px', paddingRight: '50px'}}>Amro A. </h1>
         <Scene style = {{width: '100%' }}/>
         </div>
         </div>
