@@ -1,5 +1,4 @@
-
- {
+{
     "heading": {
         "backgroundImage": "linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('/img/spur.jpg')",
         "width": "100vw",
@@ -16,7 +15,7 @@
 
     "typewriter": {
         "position": "absolute",
-        "left": "33vw",
+        "left": "50%",
         "top": "50%",
         "margin": "0",
         "color": "rgb(26, 134, 58)",
@@ -26,7 +25,7 @@
         "border-right": "0.11em solid black", 
         "whiteSpace": "nowrap",  
         "letterSpacing": ".1em", 
-        "transform": "translate(0%,-50%)",
+        "transform": "translate(-50%,-50%)",
         "width": "0",
         "animation": "typing 3s steps(var(--steps), end) 0.5s forwards, blink-caret .5s step-end 3s forwards"
     }

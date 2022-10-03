@@ -1,6 +1,4 @@
 import Cards from "./cards"
-import '../../styling/card.css'
-import styled, {keyframes} from "styled-components";
 import headerData from '../../components/blogHeader.json';
 
 function Page(props){
@@ -14,7 +12,7 @@ function Page(props){
     // customHeading.marginTop = "0.1cm"
 
     const tweakAnimation = headerData.typewriter;
-    tweakAnimation["--to-width"] = "34vw";
+    tweakAnimation["--to-width"] = "26vw";
     tweakAnimation["--steps"] = "13";
     return <body>
         <div style={headerData.heading}>

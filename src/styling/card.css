@@ -34,10 +34,10 @@ body {
     flex-direction: column;
     background-color: white;
     box-shadow: 2px 0.8rem 1rem rgba(0,0,0, 0.1);
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 10px;
-    height: fit-content;
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+    margin-bottom: 10px !important;
+    height: fit-content !important;
     border: 1px solid green;
 }
 
@@ -86,8 +86,8 @@ body {
   
     text-decoration: none;
     margin-top: 1px;
-    font-weight: 300 !important;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: inline-flex !important;
     height: auto;
     color: rgba(255, 255, 255, 0.75);
@@ -102,10 +102,10 @@ body {
     color: rgba(255, 255, 255, 0.75);
     display: block;
     margin-top: -10%;
-    font-weight: 300 !important;
+    font-weight: 300;
     padding-top: 0px;
     align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    
 }
 
@@ -117,21 +117,25 @@ body {
 }
 
 .title {
-    font-size: 2.4rem;
-    line-height: 1;
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.4rem ;
+    line-height: 1 ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .subtitle {
     font-size: 1.4rem;
     font-weight: 400;
     text-transform: uppercase;
-    color: rgb(162, 162, 162) !important;
-    margin: 1rem 0 1.5rem 0;
+   
+    color: rgb(162, 162, 162);
+    margin: 2rem 0 0rem 0;
+    
 }
 
 .description {
+   
     position: relative;
+    margin-top: 0px;
 }
 
 

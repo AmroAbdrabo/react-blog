@@ -67,7 +67,7 @@ const Wave = () => {
 
 const Scene = () => {
   return (
-    <Canvas camera={{ fov: 20, position: [0, 8.4, 4.2] }}>
+    <Canvas  camera={{ fov: 20, position: [0, 8.4, 4.2] }}>
       <OrbitControls target={[0.0, 0.0, -0.4]}/>
       <Suspense fallback={null}>
         <Wave />
@@ -126,7 +126,7 @@ const content = [
       </div>
     <a href="#contact">Search</a>
   </div> */}
-  <div style={{display: "flex", height: '100%', justifyContent: 'start'}}>
+  <div style={{display: "flex", background:'black' ,height: '100%', justifyContent: 'start'}}>
     <div >
   <ProSidebar  collapsed = {false}>
   <Menu iconShape="square">
@@ -136,16 +136,17 @@ const content = [
         <MenuItem style = {locStyle.styles}>Machine Learning</MenuItem>
         <MenuItem style = {locStyle.styles}>Algorithmicity</MenuItem>
     </SubMenu>
-    <MenuItem icon={<FaYoutube />} style = {locStyle.styles} >YouTube</MenuItem>
+    
     <MenuItem style = {locStyle.styles} icon={<FaGithub />} >GitHub</MenuItem>
+    <MenuItem icon={<FaYoutube />} style = {locStyle.styles} >YouTube</MenuItem>
     
     <MenuItem style = {locStyle.styles} icon={<FaMusic />} >Music</MenuItem>
   </Menu>
 </ProSidebar>
 </div>
 <div  style = {{ width: '100%', position:'absolute', textAlign:'center', height: '100%' }}>
-        <h1 style = {{margin:'auto', verticalAlign: 'middle',  paddingLeft: '50px', paddingRight: '50px'}}>Amro A. </h1>
-        <Scene style = {{width: '100%' }}/>
+        <h1 style = {{margin:'auto', verticalAlign: 'middle', color: 'white', paddingLeft: '50px', paddingRight: '50px'}}>Amro A. </h1>
+        <Scene style = {{width: '100%', zIndex: '-1' }}/>
         </div>
         </div>
       </>

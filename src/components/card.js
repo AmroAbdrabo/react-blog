@@ -24,8 +24,8 @@ function Card(props){
             </div>
             </div>
                 <div className="post-data">
-                <h1 className = "title"> {props.specs.title} </h1>
-                <h2 className ="subtitle"> A guide for ETHZ students</h2>
+                <p className = "title"> {props.specs.title} </p>
+                <h2 className ="subtitle" style ={{marginBottom: '0%', marginTop: '2%'}}> A guide for ETHZ students</h2>
                 <p className ="description"> fsaf fe ewf fdgdsg adg dag gda  ffsf feqf  dfa f adf fad fad fadf fdf affdf adfadf dsSVMs hjad dahj dsahj adhj dajh adhajd ensembles, deep learning, non-parametric Bayesian methods, PAC learning
                 </p>
                 <div className ="cta"> 
