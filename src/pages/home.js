@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import React, { useRef, Suspense } from "react";
+import React, { useRef, Suspense, useState } from "react";
 import { Canvas, extend, useFrame, useLoader } from "@react-three/fiber";
 import { shaderMaterial,  OrbitControls } from "@react-three/drei";
 import glsl from "babel-plugin-glsl/macro";
@@ -30,7 +30,7 @@ const WaveShaderMaterial = shaderMaterial(
     vec3 pos = position;
     float noiseFreq = 15.5;
     float noiseAmp = 0.15; 
-    vec3 noisePos = vec3(sqrt(pos.x * pos.x + pos.y * pos.y ) * 10.0 - 3.1 * uTime, pos.y, pos.z);
+    vec3 noisePos = vec3(sqrt(pos.x * pos.x + pos.y * pos.y ) * 10.0 - 1.1 * uTime, pos.y, pos.z);
     pos.z += sin(noisePos.x) * noiseAmp;
     //pos.x += sin(sqrt(noisePos.x*noisePos.x + noisePos.y*noisePos.y)) * noiseAmp;
     gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.);
@@ -77,134 +77,52 @@ const Scene = () => {
 };
 
 
-const content = [
-    {
-      icon: 'icon-class-name',
-      label: 'Label of Item',
-      to: 'a-route-path',
-    },
-    {
-      icon: 'icon-class-name',
-      label: 'Second Item',
-      content: [
-        {
-          icon: 'icon-class-name',
-          label: 'Sub Menu of Second Item',
-          to: 'another-route-path',
-        },
-      ],
-    },
-  ];
-
-
-
-
-
   const Start = () => {
     const locStyle = {
         styles : {
             fontFamily:'"Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
         }
     };
+
+    const [isCollapsed, setIsCollapsed] = useState(true);
     
+    function expandSide(e){
+        setIsCollapsed(false);
+    }
+    
+    function collapseSide(e){
+      setIsCollapsed(true);
+  }
     //useScript('./drop.js');
     return (
       
-      <>
-           {/* <div className= "sidenav">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#clients">Clients</a>
-      <a href="#contact">Contact</a>
-      <button className="dropdownbtn">Drdown 
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div className = "dropdowncontainer">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    <a href="#contact">Search</a>
-  </div> */}
-  <div style={{display: "flex", background:'black' ,height: '100%', justifyContent: 'start'}}>
+    <>
+    <div style={{display: "flex", background:'black' ,height: '100%', justifyContent: 'start'}}>
     <div >
-  <ProSidebar  collapsed = {false}>
-  <Menu iconShape="square">
-    <MenuItem style = {locStyle.styles} icon={<FaBiking />}>About me</MenuItem>
-    <SubMenu title="Blogs" icon={<FaMicroblog />}  style = {locStyle.styles}>
+    <ProSidebar onMouseEnter={expandSide} onMouseLeave={collapseSide}  collapsed = {isCollapsed}>
+    <Menu iconShape="square">
+      <MenuItem style = {locStyle.styles} icon={<FaBiking />}>About me</MenuItem>
+      <SubMenu title="Blogs" icon={<FaMicroblog />}  style = {locStyle.styles}>
         <MenuItem style = {locStyle.styles}>Cyber Security</MenuItem>
         <MenuItem style = {locStyle.styles}>Machine Learning</MenuItem>
         <MenuItem style = {locStyle.styles}>Algorithmicity</MenuItem>
-    </SubMenu>
+      </SubMenu>
     
-    <MenuItem style = {locStyle.styles} icon={<FaGithub />} >GitHub</MenuItem>
-    <MenuItem icon={<FaYoutube />} style = {locStyle.styles} >YouTube</MenuItem>
+      <MenuItem style = {locStyle.styles} icon={<FaGithub />} >GitHub</MenuItem>
+      <MenuItem icon={<FaYoutube />} style = {locStyle.styles} >YouTube</MenuItem>
     
-    <MenuItem style = {locStyle.styles} icon={<FaMusic />} >Music</MenuItem>
+      <MenuItem style = {locStyle.styles} icon={<FaMusic />} >Music</MenuItem>
   </Menu>
-</ProSidebar>
-</div>
-<div  style = {{ width: '100%', position:'absolute', textAlign:'center', height: '100%' }}>
-        <h1 style = {{margin:'auto', verticalAlign: 'middle', color: 'white', paddingLeft: '50px', paddingRight: '50px'}}>Amro A. </h1>
-        <Scene style = {{width: '100%', zIndex: '-1' }}/>
-        </div>
-        </div>
+  </ProSidebar>
+  </div>
+    <div  style = {{ width: '100%', position:'absolute', textAlign:'center', height: '100%' }}>
+            <h1 style = {{margin:'auto', verticalAlign: 'middle', color: 'white', paddingLeft: '50px', paddingRight: '50px'}}>Amro A. </h1>
+            <Scene style = {{width: '100%', zIndex: '-1' }}/>
+    </div>
+  </div>
       </>
     );
   };
   
-
-// class Start extends React.Component {
-//     constructor() {
-//       super();
-//     }
-  
-//     componentDidMount() {
-//       const s = document.createElement('script');
-//       s.type = 'text/javascript';
-//       s.async = true;
-//       s.innerHTML = `var dropdown = document.getElementsByClassName('dropdownbtn'); var i;
-      
-//       for (i = 0; i < dropdown.length; i++) {
-//         dropdown[i].addEventListener("click", function() {
-//           this.classList.toggle("active");
-//           var dropdownContent = this.nextElementSibling;
-//           if (dropdownContent.style.display === "block") {
-//             dropdownContent.style.display = "none";
-//           } else {
-//             dropdownContent.style.display = "block";
-//           }
-//         });
-//       } ";
-//       this.instance.appendChild(s);
-//     }`;
-//     this.instance.appendChild(s);
-//     }
-  
-//     render() {
-//         return (
-    
-//             <>
-//             <div className= "sidenav">
-//             <a href="#about">About</a>
-//             <a href="#services">Services</a>
-//             <a href="#clients">Clients</a>
-//             <a href="#contact">Contact</a>
-//             <button className="dropdownbtn">Drdown 
-//               <i class="fa fa-caret-down"></i>
-//             </button>
-//             <div className = "dropdowncontainer">
-//               <a href="#">Link 1</a>
-//               <a href="#">Link 2</a>
-//               <a href="#">Link 3</a>
-//             </div>
-//           <a href="#contact">Search</a>
-//         </div>
-//               <h1>AMRO A.</h1>
-//               <Scene />
-//             </>
-//           );
-//     }
-//   }
 
   export default Start;
