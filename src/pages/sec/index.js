@@ -14,6 +14,7 @@ function Page(props){
     const tweakAnimation = headerData.typewriter;
     tweakAnimation["--to-width"] = "26vw";
     tweakAnimation["--steps"] = "13";
+    tweakAnimation["letter-spacing"]="0.04em";
     return <body>
         <div style={headerData.heading}>
             <div>

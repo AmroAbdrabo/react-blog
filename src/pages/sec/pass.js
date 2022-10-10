@@ -12,7 +12,7 @@ function Article(){
         href="index.html"
         style={{ backgroundColor: "rgb(146, 135, 211)" }}
       >
-        &nbsp; &nbsp; Home
+        Home
       </a>
     </div>
     <div className="container">

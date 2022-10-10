@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import React, { useRef, Suspense, useState } from "react";
+import React, { useRef, Suspense, useState, useEffect } from "react";
 import { Canvas, extend, useFrame, useLoader } from "@react-three/fiber";
 import { shaderMaterial,  OrbitControls } from "@react-three/drei";
 import glsl from "babel-plugin-glsl/macro";
@@ -78,20 +78,61 @@ const Scene = () => {
 
 
   const Start = () => {
+
+    const h1Style = {
+      "h1": {
+        fontFamily:"'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+        color: "#fff",
+        margin: "0",
+        
+       
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        zIndex: "1",
+        fontWeight: "300",
+        letterSpacing: "0.04em",
+        whiteSpace: "nowrap"
+      }
+    };
+
     const locStyle = {
         styles : {
             fontFamily:'"Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
         }
     };
 
-    const [isCollapsed, setIsCollapsed] = useState(true);
+
+    const [width, setWidth] = useState(window.innerWidth);
+
+    function handleWindowSizeChange() {
+      setWidth(window.innerWidth);
+      if (!isMobile){
+        setIsCollapsed(true);
+      }else {
+        setIsCollapsed(false);
+      }
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+          window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+
+    var isMobile = width <= 768;
+
+    const [isCollapsed, setIsCollapsed] = useState(!isMobile);
     
     function expandSide(e){
         setIsCollapsed(false);
     }
     
     function collapseSide(e){
-      setIsCollapsed(true);
+      if (!isMobile){
+        setIsCollapsed(true);
+      }else {
+        setIsCollapsed(false);
+      }
   }
     //useScript('./drop.js');
     return (
@@ -116,7 +157,10 @@ const Scene = () => {
   </ProSidebar>
   </div>
     <div  style = {{ width: '100%', position:'absolute', textAlign:'center', height: '100%' }}>
-            <h1 style = {{margin:'auto', verticalAlign: 'middle', color: 'white', paddingLeft: '50px', paddingRight: '50px'}}>Amro A. </h1>
+            <h1 style = {{margin:'auto', verticalAlign: 'middle', color: 'white', 
+            fontFamily:"'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+            left: "50%", position: "absolute",  top: "12%", zIndex: "1",
+            fontWeight: "50", transform: "translate(-50%, -50%)"}}>Amro A. </h1>
             <Scene style = {{width: '100%', zIndex: '-1' }}/>
     </div>
   </div>
