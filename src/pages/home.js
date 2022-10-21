@@ -7,6 +7,7 @@ import "./../styling/startscreen.scss";
 import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 import styles from './../styling/frontpage.module.css'
+import flip from './../styling/flipcard.module.css'
 import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaEnvelope, FaHeart, FaBiking, FaMicroblog, FaYoutube, FaMusic, FaTh } from 'react-icons/fa';
 //import "./../styling/sidebar.css";
 
@@ -168,19 +169,54 @@ const Scene = () => {
     </div>
     
   </div>
-  <div className = { `${styles["w3-container"]} ${styles["w3-light-grey"]}`} style={{padding:"128px 16px"}}>
+<div className = { `${styles["w3-container"]} ${styles["w3-light-grey"]}`} style={{padding:"128px 16px"}}>
   <div className= {styles["w3-row-padding"]} style = {{marginLeft: "2vw"}}>
     <div className= { `${styles["w3-col"]}  ${styles["m6"]}`  }>
       <h3>About me</h3>
-      <p>As an enthusiastic and motivated student in the Computer Science department of ETHZ. <br />I strive to learn more about Machine Learning and Information Security, as well as fields which intertwine both domains. I am a result-oriented coder, a team player who can also work independently. I can program in several programming languages wherein I prioritize code clarity as well as speed.</p>
+      <p>As an enthusiastic and motivated student in the Computer Science department of ETHZ, <br />I strive to learn more about Machine Learning and Information Security, as well as fields which intertwine both domains. I am a result-oriented coder, a team player who can also work independently. I can program in several programming languages wherein I prioritize code clarity as well as speed.</p>
       <p><a href="amro.abdrabo@gmail.com" className = {`${styles["w3-button"]} ${styles["w3-black"]} `} > <FaEnvelope style ={{verticalAlign: "sub"}} /> Contact me</a></p>
     </div>
     <div className ={ `${styles["w3-col"]}  ${styles["m6"]}`  }>
-      <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/mask22.png"} alt="Buildings" width={ isMobile ? "300 px" : "435 px"} height={ isMobile ? "280 px" : "390 px"} style  = {{marginTop: `${isMobile ? "40px" : "auto"}`,  marginLeft: `${isMobile ? "auto" : "4cm"}` }}/>
+      <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/mask22.png"} alt="me" width={ isMobile ? "300 px" : "535 px"} height={ isMobile ? "280 px" : "490 px"} style  = {{marginTop: `${isMobile ? "40px" : "auto"}`,  marginLeft: `${isMobile ? "auto" : "4cm"}` }}/>
     </div>
   </div>
 </div>
-  <div>s</div>
+
+<div className = {flip["flex-container"]} style = {{paddingTop: "50px", paddingLeft: "3vw",  paddingBottom: "20px", backgroundColor: "black", color: "white"}}>
+  <h1 style = {{color: "#ffffff",fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Projects</h1>
+  <div className = {flip["flex-div"]} >
+    <div className={flip["flip-card"]}  >
+      <div className={flip["flip-card-inner"]} >
+        <div className={flip["flip-card-front"]} style = {{backgroundColor: "#ffffff", borderRadius: "20px", border: "2px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
+          <img src={"/img/handfa.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
+        </div>
+        <div className={flip["flip-card-back"]}>
+          <h1>John Doe</h1> 
+          <p>Architect & Engineer</p> 
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div className = {flip["flex-div"]}>
+    <div className={flip["flip-card"]}  >
+      <div className={flip["flip-card-inner"]}>
+        <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "2px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
+          <img src={"/img/robotfa.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
+        </div>
+        <div className={flip["flip-card-back"]}>
+          <h1>John Doe</h1> 
+          <p>Architect & Engineer</p> 
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
       </>
     );
   };
