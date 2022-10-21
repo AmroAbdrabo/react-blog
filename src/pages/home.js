@@ -181,14 +181,13 @@ const Scene = () => {
     </div>
   </div>
 </div>
-
-<div className = {flip["flex-container"]} style = {{paddingTop: "50px", paddingLeft: "3vw",  paddingBottom: "20px", backgroundColor: "black", color: "white"}}>
-  <h1 style = {{color: "#ffffff",fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Projects</h1>
+<h1 style = {{color: "#ffffff", paddingLeft: "3vw", paddingTop: "30px", marginTop: "0",backgroundColor: "black", marginBottom: "0", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Projects</h1>
+<div className = {flip["flex-container"]} style = {{paddingTop: "50px", paddingLeft: "3vw",  paddingBottom: "120px", backgroundColor: "black", color: "white"}}>
   <div className = {flip["flex-div"]} >
     <div className={flip["flip-card"]}  >
       <div className={flip["flip-card-inner"]} >
-        <div className={flip["flip-card-front"]} style = {{backgroundColor: "#ffffff", borderRadius: "20px", border: "2px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
-          <img src={"/img/handfa.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
+        <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "1px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
+          <img src={"/img/handfa2.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
         </div>
         <div className={flip["flip-card-back"]}>
           <h1>John Doe</h1> 
@@ -203,8 +202,73 @@ const Scene = () => {
   <div className = {flip["flex-div"]}>
     <div className={flip["flip-card"]}  >
       <div className={flip["flip-card-inner"]}>
-        <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "2px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
-          <img src={"/img/robotfa.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
+        <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "1px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "50px"}}>
+          <img src={"/img/robotfa2.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
+        </div>
+        <div className={flip["flip-card-back"]}>
+          <h1>John Doe</h1> 
+          <p>Architect & Engineer</p> 
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div className = {flip["flex-div"]}>
+    <div className={flip["flip-card"]}  >
+      <div className={flip["flip-card-inner"]}>
+        <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "1px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
+          <img src={"/img/datafa2.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
+        </div>
+        <div className={flip["flip-card-back"]}>
+          <h1>John Doe</h1> 
+          <p>Architect & Engineer</p> 
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div className = {flip["flex-div"]}>
+    <div className={flip["flip-card"]}  >
+      <div className={flip["flip-card-inner"]}>
+        <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "1px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
+          <img src={"/img/ethfa.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
+        </div>
+        <div className={flip["flip-card-back"]}>
+          <h1>John Doe</h1> 
+          <p>Architect & Engineer</p> 
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div className = {flip["flex-div"]}>
+    <div className={flip["flip-card"]}  >
+      <div className={flip["flip-card-inner"]}>
+        <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "1px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
+          <img src={"/img/brainfa.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
+        </div>
+        <div className={flip["flip-card-back"]}>
+          <h1>John Doe</h1> 
+          <p>Architect & Engineer</p> 
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div className = {flip["flex-div"]}>
+    <div className={flip["flip-card"]}  >
+      <div className={flip["flip-card-inner"]}>
+        <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "1px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
+          <img src={"/img/heartfa2.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
         </div>
         <div className={flip["flip-card-back"]}>
           <h1>John Doe</h1> 
