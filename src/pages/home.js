@@ -7,7 +7,7 @@ import "./../styling/startscreen.scss";
 import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 import styles from './../styling/frontpage.module.css'
-import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart, FaBiking, FaMicroblog, FaYoutube, FaMusic, FaTh } from 'react-icons/fa';
+import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaEnvelope, FaHeart, FaBiking, FaMicroblog, FaYoutube, FaMusic, FaTh } from 'react-icons/fa';
 //import "./../styling/sidebar.css";
 
 import useScript from './../components/hooks/useScript';
@@ -135,6 +135,8 @@ const Scene = () => {
         setIsCollapsed(false);
       }
   }
+  var imgWidth = "420 px"
+  var imgHeight = "350 px"
     //useScript('./drop.js');
     return (
       
@@ -167,14 +169,14 @@ const Scene = () => {
     
   </div>
   <div className = { `${styles["w3-container"]} ${styles["w3-light-grey"]}`} style={{padding:"128px 16px"}}>
-  <div className= {styles["w3-row-padding"]}>
+  <div className= {styles["w3-row-padding"]} style = {{marginLeft: "2vw"}}>
     <div className= { `${styles["w3-col"]}  ${styles["m6"]}`  }>
-      <h3>We know design.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br />tempor incididunt ut labore et dolore.</p>
-      <p><a href="#work" className = {`${styles["w3-button"]} ${styles["w3-black"]} `} > <FaTh style ={{verticalAlign: "sub"}} /> View Our Works</a></p>
+      <h3>About me</h3>
+      <p>As an enthusiastic and motivated student in the Computer Science department of ETHZ. <br />I strive to learn more about Machine Learning and Information Security, as well as fields which intertwine both domains. I am a result-oriented coder, a team player who can also work independently. I can program in several programming languages wherein I prioritize code clarity as well as speed.</p>
+      <p><a href="amro.abdrabo@gmail.com" className = {`${styles["w3-button"]} ${styles["w3-black"]} `} > <FaEnvelope style ={{verticalAlign: "sub"}} /> Contact me</a></p>
     </div>
     <div className ={ `${styles["w3-col"]}  ${styles["m6"]}`  }>
-      <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/phone.jpg"} alt="Buildings" width="700" height="394" />
+      <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/mask22.png"} alt="Buildings" width={ isMobile ? "300 px" : "435 px"} height={ isMobile ? "280 px" : "390 px"} style  = {{marginTop: `${isMobile ? "40px" : "auto"}`,  marginLeft: `${isMobile ? "auto" : "4cm"}` }}/>
     </div>
   </div>
 </div>
