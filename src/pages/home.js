@@ -6,7 +6,8 @@ import glsl from "babel-plugin-glsl/macro";
 import "./../styling/startscreen.scss";
 import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
-import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart, FaBiking, FaMicroblog, FaYoutube, FaMusic } from 'react-icons/fa';
+import styles from './../styling/frontpage.module.css'
+import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart, FaBiking, FaMicroblog, FaYoutube, FaMusic, FaTh } from 'react-icons/fa';
 //import "./../styling/sidebar.css";
 
 import useScript from './../components/hooks/useScript';
@@ -160,10 +161,24 @@ const Scene = () => {
             <h1 style = {{margin:'auto', verticalAlign: 'middle', color: 'white', 
             fontFamily:"'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
             left: "50%", position: "absolute",  top: "12%", zIndex: "1",
-            fontWeight: "50", transform: "translate(-50%, -50%)"}}>Amro A. </h1>
+            fontWeight: "50", transform: "translate(-50%, -50%)"}}> Amro A. </h1>
             <Scene style = {{width: '100%', zIndex: '-1' }}/>
     </div>
+    
   </div>
+  <div className = { `${styles["w3-container"]} ${styles["w3-light-grey"]}`} style={{padding:"128px 16px"}}>
+  <div className= {styles["w3-row-padding"]}>
+    <div className= { `${styles["w3-col"]}  ${styles["m6"]}`  }>
+      <h3>We know design.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br />tempor incididunt ut labore et dolore.</p>
+      <p><a href="#work" className = {`${styles["w3-button"]} ${styles["w3-black"]} `} > <FaTh style ={{verticalAlign: "sub"}} /> View Our Works</a></p>
+    </div>
+    <div className ={ `${styles["w3-col"]}  ${styles["m6"]}`  }>
+      <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/phone.jpg"} alt="Buildings" width="700" height="394" />
+    </div>
+  </div>
+</div>
+  <div>s</div>
       </>
     );
   };
