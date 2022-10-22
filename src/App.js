@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Start from "./pages/home";
 import SecPage from "./pages/sec/index"
+import MlPage from "./pages/ml/index"
 import Pass from "./pages/sec/pass"
 import Syssec from "./pages/sec/syssec"
 
@@ -28,7 +29,9 @@ function App() {
     <BrowserRouter>
     <Routes>
         <Route index element={<Start />} />
+        <Route path="/blog/ml" element={<MlPage />} />
         <Route path="/blog/security" element={<SecPage />} />
+       
         <Route path="/blog/security/pass" element={<Pass />} />
         <Route path="/blog/security/syssec" element={<Syssec />} />
     </Routes>

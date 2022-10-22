@@ -139,6 +139,19 @@ const Scene = () => {
   }
   var imgWidth = "420 px"
   var imgHeight = "350 px"
+
+  // smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+  });
+
+
     //useScript('./drop.js');
     return (
       
@@ -147,7 +160,7 @@ const Scene = () => {
     <div >
     <ProSidebar onMouseEnter={expandSide} onClick = {expandSide} onMouseLeave={collapseSide}  collapsed = {isCollapsed}>
     <Menu iconShape="square">
-      <MenuItem style = {locStyle.styles} icon={<FaBiking />}>About me</MenuItem>
+      <MenuItem style = {locStyle.styles} icon={<FaBiking />}> <a href="#aboutMe" style = {{all: "inherit"}}>About me</a> </MenuItem>
       <SubMenu title="Blogs" icon={<FaMicroblog />}  style = {locStyle.styles}>
         <MenuItem style = {locStyle.styles}> <Link to="/blog/security" style = {{fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Cyber Security </Link> </MenuItem>
         <MenuItem style = {locStyle.styles}> <Link to="/blog/ml" style = {{ fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Machine Learning </Link>  </MenuItem>
@@ -173,7 +186,7 @@ const Scene = () => {
     </div>
     
   </div>
-<div className = { `${styles["w3-container"]} ${styles["w3-light-grey"]}`} style={{padding:"128px 16px"}}>
+<div id = "aboutMe" className = { `${styles["w3-container"]} ${styles["w3-light-grey"]}`} style={{padding:"128px 16px"}}>
   <div className= {styles["w3-row-padding"]} style = {{marginLeft: "2vw"}}>
     <div className= { `${styles["w3-col"]}  ${styles["m6"]}`  }>
       <h3>About me</h3>
@@ -186,7 +199,7 @@ const Scene = () => {
   </div>
 </div>
 <h1 style = {{color: "#ffffff", paddingLeft: "3vw", paddingTop: "30px", marginTop: "0",backgroundColor: "black", marginBottom: "0", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Projects</h1>
-<div className = {flip["flex-container"]} style = {{paddingTop: "50px",   paddingBottom: "120px", backgroundColor: "black", color: "white"}}>
+<div className = {flip["flex-container"]} style = {{paddingTop: "50px",   paddingBottom: "150px", backgroundColor: "black", color: "white"}}>
   <div className = {flip["flex-div"]} >
     <div className={flip["flip-card"]}  >
       <div className={flip["flip-card-inner"]} >
@@ -282,8 +295,56 @@ const Scene = () => {
       </div>
     </div>
   </div>
-</div>
 
+
+<div className = {flip["flex-div"]}>
+    <div className={flip["flip-card"]}  >
+      <div className={flip["flip-card-inner"]}>
+        <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "1px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
+          <img src={"/img/androidfa.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
+        </div>
+        <div className={flip["flip-card-back"]}>
+          <h1>John Doe</h1> 
+          <p>Architect & Engineer</p> 
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div className = {flip["flex-div"]}>
+    <div className={flip["flip-card"]}  >
+      <div className={flip["flip-card-inner"]}>
+        <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "1px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
+          <img src={"/img/catfa.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
+        </div>
+        <div className={flip["flip-card-back"]}>
+          <h1>John Doe</h1> 
+          <p>Architect & Engineer</p> 
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className = {flip["flex-div"]}>
+    <div className={flip["flip-card"]}  >
+      <div className={flip["flip-card-inner"]}>
+        <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "1px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
+          <img src={"/img/visfa.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
+        </div>
+        <div className={flip["flip-card-back"]}>
+          <h1>John Doe</h1> 
+          <p>Architect & Engineer</p> 
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
 
       </>
     );
