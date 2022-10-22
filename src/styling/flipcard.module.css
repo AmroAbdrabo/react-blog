@@ -39,9 +39,12 @@
   }
 
   .flex-container {
+    
     display: flex;
+    padding-left: 6%;
     flex-wrap: wrap;
     height: auto;
+    margin: auto;
     align-content: space-between;
     flex-direction: row;
     background-color: DodgerBlue;
@@ -49,11 +52,24 @@
   
   .flex-div {
     background-color: #000000;
-    width: 100px;
-    margin-left: 200px;
-    margin-right: 200px;
+    width: fit-content;
+    margin-left: 10%;
+    
     margin-top: 15px;
     margin-bottom: 15px;
     text-align: center;
     font-size: 30px;
+  }
+
+  @media only screen and (max-width: 800px) {
+ 
+
+      .flex-container {
+        padding-left: 0%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        flex-direction: column;
+        background-color: DodgerBlue;
+      }
   }

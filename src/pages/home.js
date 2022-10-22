@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import React, { useRef, Suspense, useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Canvas, extend, useFrame, useLoader } from "@react-three/fiber";
 import { shaderMaterial,  OrbitControls } from "@react-three/drei";
 import glsl from "babel-plugin-glsl/macro";
@@ -121,7 +122,7 @@ const Scene = () => {
         }
     }, []);
 
-    var isMobile = width <= 768;
+    var isMobile = width <= 800;
 
     const [isCollapsed, setIsCollapsed] = useState(!isMobile);
     
@@ -144,19 +145,22 @@ const Scene = () => {
     <>
     <div style={{display: "flex", background:'black' ,height: '100%', justifyContent: 'start'}}>
     <div >
-    <ProSidebar onMouseEnter={expandSide} onMouseLeave={collapseSide}  collapsed = {isCollapsed}>
+    <ProSidebar onMouseEnter={expandSide} onClick = {expandSide} onMouseLeave={collapseSide}  collapsed = {isCollapsed}>
     <Menu iconShape="square">
       <MenuItem style = {locStyle.styles} icon={<FaBiking />}>About me</MenuItem>
       <SubMenu title="Blogs" icon={<FaMicroblog />}  style = {locStyle.styles}>
-        <MenuItem style = {locStyle.styles}>Cyber Security</MenuItem>
-        <MenuItem style = {locStyle.styles}>Machine Learning</MenuItem>
-        <MenuItem style = {locStyle.styles}>Algorithmicity</MenuItem>
+        <MenuItem style = {locStyle.styles}> <Link to="/blog/security" style = {{fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Cyber Security </Link> </MenuItem>
+        <MenuItem style = {locStyle.styles}> <Link to="/blog/ml" style = {{ fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Machine Learning </Link>  </MenuItem>
+        <MenuItem style = {locStyle.styles}> <Link to="/blog/algo" style = {{ fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Algorithmicity </Link> </MenuItem>
       </SubMenu>
     
-      <MenuItem style = {locStyle.styles} icon={<FaGithub />} >GitHub</MenuItem>
-      <MenuItem icon={<FaYoutube />} style = {locStyle.styles} >YouTube</MenuItem>
+      <MenuItem style = {locStyle.styles} icon={<FaGithub />} > <a
+  href="https://github.com/AmroAbdrabo/" style = {{all: "inherit"}}>GitHub</a></MenuItem>
+      <MenuItem icon={<FaYoutube />} style = {locStyle.styles} ><a
+  href="https://www.youtube.com/channel/UCFFDmwlW2Abn_NXB2MVLQ6Q" style = {{all: "inherit"}}>YouTube</a></MenuItem>    
     
-      <MenuItem style = {locStyle.styles} icon={<FaMusic />} >Music</MenuItem>
+      <MenuItem style = {locStyle.styles} icon={<FaMusic />} >  <a
+  href="https://youtu.be/-t-hUSWdwYs" style = {{all: "inherit"}}>Music</a></MenuItem>
   </Menu>
   </ProSidebar>
   </div>
@@ -173,8 +177,8 @@ const Scene = () => {
   <div className= {styles["w3-row-padding"]} style = {{marginLeft: "2vw"}}>
     <div className= { `${styles["w3-col"]}  ${styles["m6"]}`  }>
       <h3>About me</h3>
-      <p>As an enthusiastic and motivated student in the Computer Science department of ETHZ, <br />I strive to learn more about Machine Learning and Information Security, as well as fields which intertwine both domains. I am a result-oriented coder, a team player who can also work independently. I can program in several programming languages wherein I prioritize code clarity as well as speed.</p>
-      <p><a href="amro.abdrabo@gmail.com" className = {`${styles["w3-button"]} ${styles["w3-black"]} `} > <FaEnvelope style ={{verticalAlign: "sub"}} /> Contact me</a></p>
+      <p>As an enthusiastic and motivated Master student in the Computer Science department of ETHZ, <br />I strive to learn more about Machine Learning and Information Security, as well as fields which intertwine both domains. I am a result-oriented coder, a team player who can also work independently. I can program in several programming languages wherein I prioritize code clarity as well as speed.</p>
+      <p><a href="mailto:amro.abdrabo@gmail.com" className = {`${styles["w3-button"]} ${styles["w3-black"]} `} > <FaEnvelope style ={{verticalAlign: "sub"}} /> Contact me</a></p>
     </div>
     <div className ={ `${styles["w3-col"]}  ${styles["m6"]}`  }>
       <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/mask22.png"} alt="me" width={ isMobile ? "300 px" : "535 px"} height={ isMobile ? "280 px" : "490 px"} style  = {{marginTop: `${isMobile ? "40px" : "auto"}`,  marginLeft: `${isMobile ? "auto" : "4cm"}` }}/>
@@ -182,12 +186,12 @@ const Scene = () => {
   </div>
 </div>
 <h1 style = {{color: "#ffffff", paddingLeft: "3vw", paddingTop: "30px", marginTop: "0",backgroundColor: "black", marginBottom: "0", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Projects</h1>
-<div className = {flip["flex-container"]} style = {{paddingTop: "50px", paddingLeft: "3vw",  paddingBottom: "120px", backgroundColor: "black", color: "white"}}>
+<div className = {flip["flex-container"]} style = {{paddingTop: "50px",   paddingBottom: "120px", backgroundColor: "black", color: "white"}}>
   <div className = {flip["flex-div"]} >
     <div className={flip["flip-card"]}  >
       <div className={flip["flip-card-inner"]} >
         <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "1px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
-          <img src={"/img/handfa2.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
+          <img src={"/img/handfa2.png"} alt="Avatar" style={{display: "inline-block", height:"200px"}} />
         </div>
         <div className={flip["flip-card-back"]}>
           <h1>John Doe</h1> 
