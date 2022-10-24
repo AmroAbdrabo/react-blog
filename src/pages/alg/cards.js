@@ -2,7 +2,7 @@ import Card from "../../components/card"
 import { MathComponent } from "mathjax-react";
 
 const Cards = () => {
-    return <div> <Card specs = {{title: "In-memory compute", description: "How to surpass Von Neumann's data transfer bound for faster data-intensive processes ", sub: "Self \ \  study", date: "APR 2022",  imgName: "res.jpg", linkto: "https://amroabdrabo.github.io/amroa/inmem.html"}} />
+    return <div> <Card specs = {{title: "In-memory compute", description: "How to surpass Von Neumann's data transfer bound for faster data-intensive processes ", sub: "Self study", date: "APR 2022",  imgName: "res.jpg", linkto: "https://amroabdrabo.github.io/amroa/inmem.html"}} />
     <br/><br/>
     <Card specs = {{title: "Fast Numerical Code", sub: "ETH course", description: "Programming practices for when you want to finish a single-core computation before your meeting with your great-grandfather", date: "MAR 2021", imgName: "amd.jpg", linkto: "https://amroabdrabo.github.io/amroa/fastcode.html"}} /> 
     <br/><br/>

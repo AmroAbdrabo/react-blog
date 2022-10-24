@@ -1,6 +1,7 @@
 {
   "name": "amro-blog",
   "version": "0.1.0",
+  "homepage": "https://amroabdrabo.github.io/react-blog/",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^9.32.7",
@@ -9,6 +10,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "babel-plugin-glsl": "^1.0.0",
+    "gh-pages": "^4.0.0",
     "glsl-noise": "^0.0.0",
     "glslify": "^7.1.1",
     "mathjax-react": "^2.0.1",
@@ -24,6 +26,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
