@@ -17,7 +17,7 @@ function Card(props){
                 <Link to = {"abouthtml"} className="author"> 
                     <span className = "fas fa-user" style={{verticalAlign: "middle", lineHeight: "29px"}} > </span>  &nbsp; Amro Abdrabo 
                 </Link>
-                <div className = "date"><i className ="fas fa-calendar-alt" style = {{ color: "rgba(255, 255, 255, 0.75)"}}></i>  &nbsp; JAN 31, 2021</div>
+                <div className = "date"><i className ="fas fa-calendar-alt" style = {{ color: "rgba(255, 255, 255, 0.75)"}}></i>  &nbsp; {props.specs.date}</div>
 
 
 
@@ -25,12 +25,12 @@ function Card(props){
             </div>
                 <div className="post-data">
                 <p className = "title"> {props.specs.title} </p>
-                <h2 className ="subtitle" style ={{marginBottom: '0%', marginTop: '2%'}}> A guide for ETHZ students</h2>
+                <h2 className ="subtitle" style ={{marginBottom: '0%', marginTop: '2%'}}>  {props.specs.sub} </h2>
                 <p className ="description"> 
                 {props.specs.description}
                 </p>
                 <div className ="cta"> 
-                <Link to={`${props.specs.linkto}`}> Read more </Link>                 
+                <a href={`${props.specs.linkto}`}> Read more </a>                 
                 </div>
             </div>
         </div>

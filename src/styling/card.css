@@ -27,6 +27,7 @@ body {
     grid-row-gap: 7%;
     padding: 0 0;
     flex-direction: column;
+   
 }
 
 .card {
@@ -37,7 +38,11 @@ body {
     margin-left: 50px !important;
     margin-right: 50px !important;
     margin-bottom: 10px !important;
+   
+   
     height: fit-content !important;
+    min-height: 250px;
+    
 }
 
 .image-data {
@@ -148,6 +153,7 @@ body {
     content: 'i';
     color: rgba(0, 0, 0, 0);
     font-size: 1.4rem;
+    margin-right: 5px;
     overflow: hidden;
     position: relative;
     top: 0;
@@ -161,7 +167,9 @@ body {
 .cta {
     text-align: right;
     font-weight: bold;
-    margin-top: 1rem;
+    bottom: 10px;
+    right: 10px;
+    position: absolute;
 }
 
 .cta a {
@@ -176,7 +184,7 @@ body {
     position: absolute;
     left: 0;
     bottom: -0.5rem;
-    width: 100%;
+    width: 96%;
     height: 3px;
     background: blue;
     transform: scaleX(1);
