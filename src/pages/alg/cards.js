@@ -8,7 +8,7 @@ const Cards = () => {
     <br/><br/>
     <Card specs = {{title:  <MathComponent tex={String.raw` \text{max}_{i < j} (a[i]+a[j])(j-i) `} display={false}/>, sub: "From Asia Seoul Regional 2021 - L",description: ["Divide and conquer solution with ", <MathComponent tex={String.raw` O(n\log n)`} display={false}/>, " complexity"], date: "FEB 2021", imgName: "mathart.png", linkto: "https://amroabdrabo.github.io/amroa/pr1.html"}} /> 
     <br/><br/>
-    <Card specs = {{sub: "From a local EPFL-ETHZ contest 2019", title:  <MathComponent tex={String.raw` \sum \limits_{\alpha + \beta + \gamma + \delta = K}{N\choose A+ \alpha,B+\beta,G+\gamma ,D+\delta} `} display={false}/>, description:  ["An  ", <MathComponent tex={String.raw` O(n)`} display={false}/>, " solution. Naive solution has ", <MathComponent tex={String.raw` O(n^3)`} display={false}/>, " complexity"], date: "JUN 2022", imgName: "math3.png", linkto: "https://amroabdrabo.github.io/amroa/fastcode.html"}} /> 
+    <Card specs = {{sub: "From a local EPFL-ETHZ contest 2019", title:  <MathComponent tex={String.raw` \sum \limits_{\alpha + \beta + \gamma + \delta = K}{N\choose A+ \alpha,B+\beta,G+\gamma ,D+\delta} `} display={false}/>, description:  ["An  ", <MathComponent tex={String.raw` O(n)`} display={false}/>, " solution. Naive solution has ", <MathComponent tex={String.raw` O(n^3)`} display={false}/>, " complexity"], date: "JUN 2022", imgName: "math3.png", linkto: "https://amroabdrabo.github.io/amroa/pr2.html"}} /> 
     <div style={{height: "120px", width: "10px", border: "1px solid rgba(1, 1, 1, 0)"}} ></div>
     </div>;
 }
