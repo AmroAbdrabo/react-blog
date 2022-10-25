@@ -1,7 +1,7 @@
 {
   "name": "amro-blog",
   "version": "0.1.0",
-  "homepage": "https://amroabdrabo.github.io/react-blog/",
+  "homepage": "https://amroabdrabo.github.io/",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^9.32.7",

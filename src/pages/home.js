@@ -207,9 +207,10 @@ const Scene = () => {
           <img src={"/img/handfa2.png"} alt="Avatar" style={{display: "inline-block", height:"200px"}} />
         </div>
         <div className={flip["flip-card-back"]}>
-          <h1>John Doe</h1> 
-          <p>Architect & Engineer</p> 
-          <p>We love that guy</p>
+          <h1>3D hand pose estimation</h1> 
+          <p>Given images of hands in-the-wild, scored a Procrustes loss of
+around 9 for the Machine Perception course. I implemented all
+the 4 models used and contributed to writing a final report which can be found <a href="https://github.com/AmroAbdrabo/mp-hand-pose-estimation">here</a>.</p> 
         </div>
       </div>
     </div>
@@ -223,9 +224,8 @@ const Scene = () => {
           <img src={"/img/robotfa2.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
         </div>
         <div className={flip["flip-card-back"]}>
-          <h1>John Doe</h1> 
-          <p>Architect & Engineer</p> 
-          <p>We love that guy</p>
+          <h1> Tangible <br />Classroom Orchestration  </h1> 
+          <p>Computer-human interaction project with the goal of classroom orchestration. Programmed classroom orchestration tool using Cellulo robots, <a href="https://github.com/AmroAbdrabo/orchestrationChili">programmed</a> in QML, that receive feedback from students and commands from a teacher via <a href="https://github.com/chili-epfl/FROG">FROG</a> web interface. </p> 
         </div>
       </div>
     </div>
@@ -240,9 +240,10 @@ const Scene = () => {
           <img src={"/img/datafa2.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
         </div>
         <div className={flip["flip-card-back"]}>
-          <h1>John Doe</h1> 
-          <p>Architect & Engineer</p> 
-          <p>We love that guy</p>
+          <h1>Yelp DB Project</h1> 
+          <p>Designed an ER-schema for a Yelp database. Cleansed data in CSV format, and
+imported it to a database in Oracle SQL. Then, the data was query optimized and
+queried to gain insights into the data. Available <a href="https://github.com/AmroAbdrabo/yelp-ETL">here</a>.</p> 
         </div>
       </div>
     </div>
@@ -255,9 +256,12 @@ const Scene = () => {
           <img src={"/img/ethfa.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
         </div>
         <div className={flip["flip-card-back"]}>
-          <h1>John Doe</h1> 
-          <p>Architect & Engineer</p> 
-          <p>We love that guy</p>
+          <h1>Static analysis on <br/> Ethereum smart contracts</h1> 
+          <p>Given a series of smart contracts for Ethereum, the task was
+to label each contract vulnerable or safe using static analysis. I
+thus implemented a 1000 LOC taint analyser for smart contracts
+written in Solidity. Available <a href="https://github.com/AmroAbdrabo/ethereumsc-
+taint-analyzer">here</a>.</p> 
         </div>
       </div>
     </div>
@@ -271,9 +275,11 @@ const Scene = () => {
           <img src={"/img/brainfa.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
         </div>
         <div className={flip["flip-card-back"]}>
-          <h1>John Doe</h1> 
-          <p>Architect & Engineer</p> 
-          <p>We love that guy</p>
+          <h1>Sleep stage scoring</h1> 
+          <p>Three-stage sleep classification was performed on EMG and EEG(1,2) data from mice
+to determine the state of the mouse in a 4 second epoch (REM, non-REM, and
+awake). Several algorithms including CNN and SVM were formulated (available <a href = "https://github.com/AmroAbdrabo/task4">here</a>) 
+in Python.</p> 
         </div>
       </div>
     </div>
@@ -288,9 +294,11 @@ const Scene = () => {
           <img src={"/img/heartfa2.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
         </div>
         <div className={flip["flip-card-back"]}>
-          <h1>John Doe</h1> 
-          <p>Architect & Engineer</p> 
-          <p>We love that guy</p>
+          <h1>Arrhythmia classification</h1> 
+          <p>Given an imbalanced learning problem consisting of four types of heartbeats:
+healthy, atrial fibrillation, an undisclosed type of arrhythmia, and a noisy
+non-interpretable beat. Several research papers were studied and combined for
+the final implementation in Python which can be found <a href = "https://github.com/AmroAbdrabo/ecg-feature-extraction/blob/main/ecg_features.ipynb">here</a>. </p> 
         </div>
       </div>
     </div>
@@ -304,9 +312,8 @@ const Scene = () => {
           <img src={"/img/androidfa.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
         </div>
         <div className={flip["flip-card-back"]}>
-          <h1>John Doe</h1> 
-          <p>Architect & Engineer</p> 
-          <p>We love that guy</p>
+          <h1>Run0rD1e</h1> 
+          <p>Physical location-based game in Java for Android. The game consists of a player surrounded by evil bots that one must escape. The game’s entities are displayed on a map. Specifically, each entity has a radius and the player loses health if his circle intersects with a bots circle. Agile software development was used. <a href = "https://www.youtube.com/watch?v=3h8_igFeRb4">Trailer</a> and <a href = "https://github.com/Zeavee/Run0rD1e">project</a>. </p> 
         </div>
       </div>
     </div>
@@ -320,9 +327,8 @@ const Scene = () => {
           <img src={"/img/catfa.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
         </div>
         <div className={flip["flip-card-back"]}>
-          <h1>John Doe</h1> 
-          <p>Architect & Engineer</p> 
-          <p>We love that guy</p>
+          <h1>Catrine</h1> 
+          <p> First-person cat avatar game using MonoGame and C++ for the physics engine. I was responsible for the skybox, physics-free player movement, and camera. Click  <a href = "https://youtu.be/WIuS6iGwTIA">here</a> for the trailer (game link in description).</p> 
         </div>
       </div>
     </div>
@@ -335,9 +341,8 @@ const Scene = () => {
           <img src={"/img/visfa.png"} alt="Avatar" style={{display: "inline-block", width:"200px", height:"200px"}} />
         </div>
         <div className={flip["flip-card-back"]}>
-          <h1>John Doe</h1> 
-          <p>Architect & Engineer</p> 
-          <p>We love that guy</p>
+          <h1> VIScon Hackathon</h1> 
+          <p>Gamified version of ASVZ gym app done in 48 hours in React and R3F, and Python. GitHub project available <a href = "https://github.com/Sau1707/VisconHackaton2022">here</a>. </p>
         </div>
       </div>
     </div>
