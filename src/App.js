@@ -8,9 +8,13 @@ import Syssec from "./pages/sec/syssec"
 
 //import logo from './logo.svg';
 import * as React from 'react';
+import  {useEffect } from 'react';
 
 
 function App() {
+  useEffect(() => {
+    document.title = 'Amro Blog';
+  });
 //   var dropdown = document.getElementsByClassName("dropdown-btn");
 // var i;
 
