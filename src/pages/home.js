@@ -8,6 +8,7 @@ import "./../styling/startscreen.scss";
 import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 import styles from './../styling/frontpage.module.css'
+import timeline_style from './../styling/timeline.module.css'
 import flip from './../styling/flipcard.module.css'
 import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaEnvelope, FaHeart, FaBiking, FaMicroblog, FaYoutube, FaMusic, FaTh } from 'react-icons/fa';
 //import "./../styling/sidebar.css";
@@ -173,7 +174,7 @@ const Scene = () => {
   href="https://www.youtube.com/channel/UCFFDmwlW2Abn_NXB2MVLQ6Q" style = {{all: "inherit"}}>YouTube</a></MenuItem>    
     
       <MenuItem style = {locStyle.styles} icon={<FaMusic />} >  <a
-  href="https://youtu.be/-t-hUSWdwYs" style = {{all: "inherit"}}>Music</a></MenuItem>
+  href="https://youtu.be/uSala9JNyYE" style = {{all: "inherit"}}>Music</a></MenuItem>
   </Menu>
   </ProSidebar>
   </div>
@@ -186,7 +187,7 @@ const Scene = () => {
     </div>
     
   </div>
-<div id = "aboutMe" className = { `${styles["w3-container"]} ${styles["w3-light-grey"]}`} style={{padding:"128px 16px"}}>
+ <div id = "aboutMe" className = { `${styles["w3-container"]} ${styles["w3-light-grey"]}`} style={{padding:"128px 16px"}}>
   <div className= {styles["w3-row-padding"]} style = {{marginLeft: "2vw"}}>
     <div className= { `${styles["w3-col"]}  ${styles["m6"]}`  }>
       <h3>About me</h3>
@@ -197,9 +198,9 @@ const Scene = () => {
       <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/mask22.png"} alt="me" width={ isMobile ? "300 px" : "535 px"} height={ isMobile ? "280 px" : "490 px"} style  = {{marginTop: `${isMobile ? "40px" : "auto"}`,  marginLeft: `${isMobile ? "auto" : "4cm"}` }}/>
     </div>
   </div>
-</div>
-<h1 style = {{color: "#ffffff", paddingLeft: "3vw", paddingTop: "30px", marginTop: "0",backgroundColor: "black", marginBottom: "0", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Projects</h1>
-<div className = {flip["flex-container"]} style = {{paddingTop: "50px",   paddingBottom: "150px", backgroundColor: "black", color: "white"}}>
+ </div>
+ <h1 style = {{color: "#ffffff", paddingLeft: "3vw", paddingTop: "30px", marginTop: "0",backgroundColor: "black", marginBottom: "0", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Projects</h1>
+ <div className = {flip["flex-container"]} style = {{paddingTop: "50px",   paddingBottom: "150px", backgroundColor: "black", color: "white"}}>
   <div className = {flip["flex-div"]} >
     <div className={flip["flip-card"]}  >
       <div className={flip["flip-card-inner"]} >
@@ -305,7 +306,7 @@ the final implementation in Python which can be found <a href = "https://github.
   </div>
 
 
-<div className = {flip["flex-div"]}>
+ <div className = {flip["flex-div"]}>
     <div className={flip["flip-card"]}  >
       <div className={flip["flip-card-inner"]}>
         <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "1px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
@@ -320,7 +321,7 @@ the final implementation in Python which can be found <a href = "https://github.
   </div>
 
 
-<div className = {flip["flex-div"]}>
+ <div className = {flip["flex-div"]}>
     <div className={flip["flip-card"]}  >
       <div className={flip["flip-card-inner"]}>
         <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "1px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
@@ -350,6 +351,61 @@ the final implementation in Python which can be found <a href = "https://github.
 
 
 </div>
+
+
+
+
+
+
+ 
+
+
+
+
+
+  <h1 style = {{color: "#AE0096", paddingLeft: "3vw", paddingTop: "30px", marginTop: "0",backgroundColor: "#E2FFFD", marginBottom: "0", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Experience</h1>
+   <div style = {{paddingTop: "60px", backgroundColor: "#E2FFFD", paddingBottom: "10vw"}}>
+
+      <div className={timeline_style["timeline"]}>
+        <div className={`${timeline_style["container"]} ${timeline_style["left"]}`}>
+          <div className={timeline_style["content"]}>
+            <h2>2022</h2>
+            <p>
+            C# Software Engineer at ETH Juniors <br/> <p style={{color: "gray"}}> Full stack development. Significantly increased backend speedup, improved 3D model generation. </p>
+             </p>
+          </div>
+        </div>
+        <div className={`${timeline_style["container"]} ${timeline_style["right"]}`}>
+          <div className={timeline_style["content"]}>
+            <h2>2019</h2>
+            <p>
+            Student teaching assistant in Analysis at EPFL
+            <p style={{color: "gray"}}> supervised by Prof. Dr. Lachowska </p>
+             
+            </p>
+          </div>
+        </div>
+        <div className={`${timeline_style["container"]} ${timeline_style["left"]}`}>
+          <div className={timeline_style["content"]}>
+          <h2>2015</h2>
+            <p>
+            Group Summer Internship on Brain Imaging at Dawson College and Cerebral Imaging Centre 
+            <p style={{color: "gray"}}>Phase correction for MRI signal acquisition under supervision of Prof. Dr. Nadeau.  <br/>
+         <a href="https://www.slideshare.net/MyriamDimanche/brainimaging2015100622h29-70517931">Final Presentation</a>  </p>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+
+
+
+
+
+
+    
+
 
       </>
     );
