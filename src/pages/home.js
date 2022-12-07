@@ -368,8 +368,10 @@ the final implementation in Python which can be found <a href = "https://github.
 
       <div className={timeline_style["timeline"]}>
         <div className={`${timeline_style["container"]} ${timeline_style["left"]}`}>
+          
           <div className={timeline_style["content"]}>
-            <h2>2022</h2>
+          <img src={"/img/juniors.jpg"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"60%"}} />
+            <h2 style={{marginTop: "20px"}}>2022</h2>
             <p>
             C# Software Engineer at ETH Juniors <br/> <p style={{color: "gray"}}> Full stack development. Significantly increased backend speedup, improved 3D model generation. </p>
              </p>
@@ -377,7 +379,8 @@ the final implementation in Python which can be found <a href = "https://github.
         </div>
         <div className={`${timeline_style["container"]} ${timeline_style["right"]}`}>
           <div className={timeline_style["content"]}>
-            <h2>2019</h2>
+          <img src={"/img/epfl.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"40%"}} />
+            <h2 style={{marginTop: "20px"}}>2019</h2>
             <p>
             Student teaching assistant in Analysis at EPFL
             <p style={{color: "gray"}}> supervised by Prof. Dr. Lachowska </p>
@@ -387,7 +390,8 @@ the final implementation in Python which can be found <a href = "https://github.
         </div>
         <div className={`${timeline_style["container"]} ${timeline_style["left"]}`}>
           <div className={timeline_style["content"]}>
-          <h2>2015</h2>
+          <img src={"/img/dawson.jpg"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"48%"}} />
+          <h2 style={{marginTop: "20px"}}>2015</h2>
             <p>
             Group Summer Internship on Brain Imaging at Dawson College and Cerebral Imaging Centre 
             <p style={{color: "gray"}}>Phase correction for MRI signal acquisition under supervision of Prof. Dr. Nadeau.  <br/>

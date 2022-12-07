@@ -9,11 +9,12 @@
   
   /* The actual timeline (the vertical ruler) */
   .timeline {
-    
+   
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
     background-color: #1d222b;
+    background: linear-gradient(#041534, #E2FFFD);
     padding-bottom: 50px;
     padding-top: 50px;
     border-radius: 20px;
@@ -23,9 +24,9 @@
   .timeline::after {
     content: '';
     position: absolute;
-    background: linear-gradient(black, rgb(93, 0, 255));
+    background: linear-gradient(to bottom, black, rgb(93, 0, 255), #E2FFFD);
     width: 6px;
-    animation: 1s linear infinite paused gradient;
+    
     background-color: white;
     top: 0;
     bottom: 0;
