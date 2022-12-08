@@ -373,7 +373,7 @@ the final implementation in Python which can be found <a href = "https://github.
           <img src={"/img/juniors.jpg"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"60%"}} />
             <h2 style={{marginTop: "20px"}}>2022</h2>
             <p>
-            C# Software Engineer at ETH Juniors <br/> <p style={{color: "gray"}}> Full stack development. Significantly increased backend speedup, improved 3D model generation. </p>
+            C# Software Engineer at ETH Juniors <br/> <p style={{color: "gray"}}> Full stack development. Increasing backend speedup using Python. </p>
              </p>
           </div>
         </div>
