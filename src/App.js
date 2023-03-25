@@ -4,6 +4,7 @@ import SecPage from "./pages/sec/index"
 import MlPage from "./pages/ml/index"
 import AlPage from "./pages/alg/index"
 import Pass from "./pages/sec/pass"
+import ExPage from "./pages/life/index"
 import Syssec from "./pages/sec/syssec"
 
 //import logo from './logo.svg';
@@ -37,7 +38,7 @@ function App() {
         <Route path="/blog/ml" element={<MlPage />} />
         <Route path="/blog/security" element={<SecPage />} />
         <Route path="/blog/alg" element={<AlPage />} />
-        
+        <Route path="/blog/life" element={<ExPage />} />
         <Route path="/blog/security/pass" element={<Pass />} />
         <Route path="/blog/security/syssec" element={<Syssec />} />
     </Routes>

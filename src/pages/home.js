@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import SmoothScroll from "./smoothscroll";
 import React, { useRef, Suspense, useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Canvas, extend, useFrame, useLoader } from "@react-three/fiber";
@@ -63,7 +64,7 @@ const Wave = () => {
 
   return (
     <mesh scale={[1, 1, 1]}>
-      <planeBufferGeometry args={[3.8, 3.8, 40, 40]} />
+      <planeBufferGeometry args={[3.4, 3.4, 40, 40]} />
       <waveShaderMaterial uColor={"hotpink"} ref={ref} wireframe />
     </mesh>
   );
@@ -71,8 +72,8 @@ const Wave = () => {
 
 const Scene = () => {
   return (
-    <Canvas  camera={{ fov: 20, position: [0, 8.4, 4.2] }}>
-      <OrbitControls target={[0.0, 0.0, -0.4]}/>
+    <Canvas  camera={{ fov: 20, position: [0, 8.0, 3.2] }}>
+      <OrbitControls target={[0.0, 0.0, -0.0]}/>
       <Suspense fallback={null}>
         <Wave />
       </Suspense>
@@ -152,20 +153,21 @@ const Scene = () => {
     });
   });
 
-
-    //useScript('./drop.js');
+  
     return (
       
     <>
+     <SmoothScroll />
     <div style={{display: "flex", background:'black' ,height: '100%', justifyContent: 'start'}}>
     <div >
     <ProSidebar onMouseEnter={expandSide} onClick = {expandSide} onMouseLeave={collapseSide}  collapsed = {isCollapsed}>
     <Menu iconShape="square">
-      <MenuItem style = {locStyle.styles} icon={<FaBiking />}> <a href="#aboutMe" style = {{all: "inherit"}}>About me</a> </MenuItem>
+    <MenuItem style = {locStyle.styles} icon={<FaBiking />}> <a href="#aboutMe" style = {{all: "inherit"}}>About me</a> </MenuItem>
       <SubMenu title="Blogs" icon={<FaMicroblog />}  style = {locStyle.styles}>
         <MenuItem style = {locStyle.styles}> <Link to="/blog/security" style = {{fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Cyber Security </Link> </MenuItem>
         <MenuItem style = {locStyle.styles}> <Link to="/blog/ml" style = {{ fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Machine Learning </Link>  </MenuItem>
         <MenuItem style = {locStyle.styles}> <Link to="/blog/alg" style = {{ fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Algorithmicity </Link> </MenuItem>
+        <MenuItem style = {locStyle.styles}> <Link to="/blog/life" style = {{ fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Life Experiences </Link> </MenuItem>
       </SubMenu>
     
       <MenuItem style = {locStyle.styles} icon={<FaGithub />} > <a
@@ -174,7 +176,7 @@ const Scene = () => {
   href="https://www.youtube.com/channel/UCFFDmwlW2Abn_NXB2MVLQ6Q" style = {{all: "inherit"}}>YouTube</a></MenuItem>    
     
       <MenuItem style = {locStyle.styles} icon={<FaMusic />} >  <a
-  href="https://youtu.be/uSala9JNyYE" style = {{all: "inherit"}}>Music</a></MenuItem>
+  href="https://youtu.be/Rq-bT7Gw5hQ" style = {{all: "inherit"}}>Music</a></MenuItem>
   </Menu>
   </ProSidebar>
   </div>
@@ -261,8 +263,7 @@ queried to gain insights into the data. Available <a href="https://github.com/Am
           <p>Given a series of smart contracts for Ethereum, the task was
 to label each contract vulnerable or safe using static analysis. I
 thus implemented a 1000 LOC taint analyser for smart contracts
-written in Solidity. Available <a href="https://github.com/AmroAbdrabo/ethereumsc-
-taint-analyzer">here</a>.</p> 
+written in Solidity. Available <a href="https://github.com/AmroAbdrabo/ethereum-sc-taint-analyzer">here</a>.</p> 
         </div>
       </div>
     </div>
@@ -367,20 +368,30 @@ the final implementation in Python which can be found <a href = "https://github.
    <div style = {{paddingTop: "60px", backgroundColor: "#E2FFFD", paddingBottom: "10vw"}}>
 
       <div className={timeline_style["timeline"]}>
-        <div className={`${timeline_style["container"]} ${timeline_style["left"]}`}>
+        <div className={`${timeline_style["container"]} ${timeline_style["left"]}`} >
           
-          <div className={timeline_style["content"]}>
+          <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
           <img src={"/img/juniors.jpg"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"60%"}} />
-            <h2 style={{marginTop: "20px"}}>2022</h2>
+            <h2 style={{marginTop: "20px"}}>Nov 2022 - Jan 2023</h2>
             <p>
-            C# Software Engineer at ETH Juniors <br/> <p style={{color: "gray"}}> Full stack development. Increasing backend speedup using Python. </p>
+             Software Engineer at ETH Juniors <br/> <p style={{color: "gray"}}> Developing photogrammetry software <br/>
+              <ul>
+                <li> Worked across the entire stack in C#, JS, HTML, Python, Docker (full stack development)  </li>
+                <li> Reduced backend processing time by around 23% </li>
+                <li> Designed architecture and identified security risks for guest login </li>
+                <li> Designed computational geometric methods for scale determination </li>
+                <li> Used statistical techniques to enhance 3D models </li>
+                <li> Presented in both English and German </li>
+                
+              </ul>
+            </p>
              </p>
           </div>
         </div>
         <div className={`${timeline_style["container"]} ${timeline_style["right"]}`}>
           <div className={timeline_style["content"]}>
           <img src={"/img/epfl.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"40%"}} />
-            <h2 style={{marginTop: "20px"}}>2019</h2>
+            <h2 style={{marginTop: "20px"}}>Sept 2019 - Dec </h2>
             <p>
             Student teaching assistant in Analysis at EPFL
             <p style={{color: "gray"}}> supervised by Prof. Dr. Lachowska </p>
@@ -391,7 +402,7 @@ the final implementation in Python which can be found <a href = "https://github.
         <div className={`${timeline_style["container"]} ${timeline_style["left"]}`}>
           <div className={timeline_style["content"]}>
           <img src={"/img/dawson.jpg"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"48%"}} />
-          <h2 style={{marginTop: "20px"}}>2015</h2>
+          <h2 style={{marginTop: "20px"}}>May 2015 - Jun</h2>
             <p>
             Group Summer Internship on Brain Imaging at Dawson College and Cerebral Imaging Centre 
             <p style={{color: "gray"}}>Phase correction for MRI signal acquisition under supervision of Prof. Dr. Nadeau.  <br/>
