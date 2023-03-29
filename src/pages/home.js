@@ -72,7 +72,7 @@ const Wave = () => {
 
 const Scene = () => {
   return (
-    <Canvas  camera={{ fov: 20, position: [0, 8.0, 3.2] }}>
+    <Canvas  camera={{ fov: 20, position: [0, 9.0, 4.2] }}>
       <OrbitControls target={[0.0, 0.0, -0.0]}/>
       <Suspense fallback={null}>
         <Wave />
@@ -164,10 +164,10 @@ const Scene = () => {
     <Menu iconShape="square">
     <MenuItem style = {locStyle.styles} icon={<FaBiking />}> <a href="#aboutMe" style = {{all: "inherit"}}>About me</a> </MenuItem>
       <SubMenu title="Blogs" icon={<FaMicroblog />}  style = {locStyle.styles}>
-        <MenuItem style = {locStyle.styles}> <Link to="/blog/security" style = {{fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Cyber Security </Link> </MenuItem>
-        <MenuItem style = {locStyle.styles}> <Link to="/blog/ml" style = {{ fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Machine Learning </Link>  </MenuItem>
-        <MenuItem style = {locStyle.styles}> <Link to="/blog/alg" style = {{ fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Algorithmicity </Link> </MenuItem>
-        <MenuItem style = {locStyle.styles}> <Link to="/blog/life" style = {{ fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Life Experiences </Link> </MenuItem>
+        <MenuItem style = {locStyle.styles}> <a href="https://amroabdrabo.github.io/#/blog/security" style = {{fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Cyber Security </a> </MenuItem>
+        <MenuItem style = {locStyle.styles}> <a href="https://amroabdrabo.github.io/#/blog/ml" style = {{ fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Machine Learning </a>  </MenuItem>
+        <MenuItem style = {locStyle.styles}> <a href="https://amroabdrabo.github.io/#/blog/alg" style = {{ fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Algorithmicity </a> </MenuItem>
+        
       </SubMenu>
     
       <MenuItem style = {locStyle.styles} icon={<FaGithub />} > <a
@@ -207,7 +207,7 @@ const Scene = () => {
     <div className={flip["flip-card"]}  >
       <div className={flip["flip-card-inner"]} >
         <div className={flip["flip-card-front"]} style = {{backgroundColor: "rgb(24, 49, 83)", borderRadius: "20px", border: "1px solid darkblue", alignItems: "center", justifyContent: "center", paddingTop: "40px"}}>
-          <img src={"/img/handfa2.png"} alt="Avatar" style={{display: "inline-block", height:"200px"}} />
+          <img src={"/img/handfa2.png"} alt="Avatar" style={{display: "inline-block", height:"200px", width: "180px"}} />
         </div>
         <div className={flip["flip-card-back"]}>
           <h1>3D hand pose estimation</h1> 
@@ -368,18 +368,33 @@ the final implementation in Python which can be found <a href = "https://github.
    <div style = {{paddingTop: "60px", backgroundColor: "#E2FFFD", paddingBottom: "10vw"}}>
 
       <div className={timeline_style["timeline"]}>
+
+      <div className={`${timeline_style["container"]} ${timeline_style["right"]}`} >
+          <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
+          <img src={"/img/eceth.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"84%"}} />
+            <h2 style={{marginTop: "20px"}}>Feb 2023 - Present</h2>
+            <p>
+             React Software Engineer at ETH Entrepreneur Club <br/> <p style={{color: "gray"}}> Web Platforms for ETH Startups <br/>
+             
+            </p>
+             </p>
+          </div>
+        </div>
+
+
+
         <div className={`${timeline_style["container"]} ${timeline_style["left"]}`} >
-          
           <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
           <img src={"/img/juniors.jpg"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"60%"}} />
             <h2 style={{marginTop: "20px"}}>Nov 2022 - Jan 2023</h2>
             <p>
-             Software Engineer at ETH Juniors <br/> <p style={{color: "gray"}}> Developing photogrammetry software <br/>
+             Fullstack Software Engineer at ETH Juniors <br/> <p style={{color: "gray"}}> Developing photogrammetry software <br/>
               <ul>
                 <li> Worked across the entire stack in C#, JS, HTML, Python, Docker (full stack development)  </li>
                 <li> Reduced backend processing time by around 23% </li>
                 <li> Designed architecture and identified security risks for guest login </li>
                 <li> Designed computational geometric methods for scale determination </li>
+                <li> Resume and pause 3D model computation </li>
                 <li> Used statistical techniques to enhance 3D models </li>
                 <li> Presented in both English and German </li>
                 
