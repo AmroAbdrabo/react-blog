@@ -372,10 +372,18 @@ the final implementation in Python which can be found <a href = "https://github.
       <div className={`${timeline_style["container"]} ${timeline_style["right"]}`} >
           <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
           <img src={"/img/eceth.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"84%"}} />
-            <h2 style={{marginTop: "20px"}}>Feb 2023 - Present</h2>
+            <h2 style={{marginTop: "20px"}}>Feb 2023 - July</h2>
             <p>
              React Software Engineer at ETH Entrepreneur Club <br/> <p style={{color: "gray"}}> Web Platforms for ETH Startups <br/>
-             
+             <ul>
+                <li> VC onboarding functionality for <a href="https://rocket-hub.ch">Rockethub</a>  </li>
+                <li> Functionality to reject startup applications and delete startups </li>
+                <li> Functionality to remove members from startup </li>
+                <li> Functionality to upload logos and wall plaques (images with description of startup) </li>
+                <li> Proposed new design for landing page </li>
+                <li> Remove cap of 5 members for each startup </li>
+                <li> Fix bug disabling adding perks for supporters </li>
+              </ul>
             </p>
              </p>
           </div>
@@ -399,6 +407,8 @@ the final implementation in Python which can be found <a href = "https://github.
                 <li> Presented in both English and German </li>
                 
               </ul>
+              <a href="https://drive.google.com/file/d/1WWxluVRb9SrL0tdiHFaem_rI1UOWJ4Vh/view?usp=sharing">All reference letters</a> (as one pdf)
+              
             </p>
              </p>
           </div>
