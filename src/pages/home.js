@@ -114,7 +114,7 @@ const Scene = () => {
       if (!isMobile){
         setIsCollapsed(true);
       }else {
-        setIsCollapsed(false);
+        setIsCollapsed(true);
       }
     }
     useEffect(() => {
@@ -172,8 +172,7 @@ const Scene = () => {
     
       <MenuItem style = {locStyle.styles} icon={<FaGithub />} > <a
   href="https://github.com/AmroAbdrabo/" style = {{all: "inherit"}}>GitHub</a></MenuItem>
-      <MenuItem icon={<FaYoutube />} style = {locStyle.styles} ><a
-  href="https://www.youtube.com/channel/UCFFDmwlW2Abn_NXB2MVLQ6Q" style = {{all: "inherit"}}>YouTube</a></MenuItem>    
+    
     
       <MenuItem style = {locStyle.styles} icon={<FaMusic />} >  <a
   href="https://youtu.be/Rq-bT7Gw5hQ" style = {{all: "inherit"}}>Music</a></MenuItem>
@@ -197,7 +196,7 @@ const Scene = () => {
       <p><a href="mailto:amro.abdrabo@gmail.com" className = {`${styles["w3-button"]} ${styles["w3-black"]} `} > <FaEnvelope style ={{verticalAlign: "sub"}} /> Contact me</a></p>
     </div>
     <div className ={ `${styles["w3-col"]}  ${styles["m6"]}`  }>
-      <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/mask22.png"} alt="me" width={ isMobile ? "300 px" : "535 px"} height={ isMobile ? "280 px" : "490 px"} style  = {{marginTop: `${isMobile ? "40px" : "auto"}`,  marginLeft: `${isMobile ? "auto" : "4cm"}` }}/>
+      <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/mask22.png"} alt="me" width={ isMobile ? "300 px" : "535 px"} height={ isMobile ? "280 px" : "470 px"} style  = {{marginTop: `${isMobile ? "40px" : "auto"}`,  marginLeft: `${isMobile ? "auto" : "4cm"}` }}/>
     </div>
   </div>
  </div>
@@ -372,11 +371,11 @@ the final implementation in Python which can be found <a href = "https://github.
       <div className={`${timeline_style["container"]} ${timeline_style["right"]}`} >
           <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
           <img src={"/img/eceth.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"84%"}} />
-            <h2 style={{marginTop: "20px"}}>Feb 2023 - July</h2>
+            <h2 style={{marginTop: "20px"}}>Feb 2023 - Jul</h2>
             <p>
              React Software Engineer at ETH Entrepreneur Club <br/> <p style={{color: "gray"}}> Web Platforms for ETH Startups <br/>
              <ul>
-                <li> VC onboarding functionality for <a href="https://rocket-hub.ch">Rockethub</a>  </li>
+                <li> VC onboarding functionality for <a href="https://rocket-hub.ch" style={{fontSize: "medium"}}>Rockethub</a>  </li>
                 <li> Functionality to reject startup applications and delete startups </li>
                 <li> Functionality to remove members from startup </li>
                 <li> Functionality to upload logos and wall plaques (images with description of startup) </li>
