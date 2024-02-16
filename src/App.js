@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Switch, Route } from "react-router-dom";
 import Start from "./pages/home";
 import SecPage from "./pages/sec/index"
 import MlPage from "./pages/ml/index"
@@ -30,21 +30,21 @@ function App() {
 //     }
 //   });
 // }
-  return (
-    <>
+return (
+  <>
     <HashRouter>
-    <Routes>
-        <Route index element={<Start />} />
+      <Switch>
+        <Route exact path="/" element={<Start />} />
         <Route path="/blog/ml" element={<MlPage />} />
         <Route path="/blog/security" element={<SecPage />} />
         <Route path="/blog/alg" element={<AlPage />} />
         <Route path="/blog/life" element={<ExPage />} />
         <Route path="/blog/security/pass" element={<Pass />} />
         <Route path="/blog/security/syssec" element={<Syssec />} />
-    </Routes>
-  </HashRouter>
+      </Switch>
+    </HashRouter>
   </>
-  );
+);
 }
 
 export default App;

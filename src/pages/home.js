@@ -175,7 +175,7 @@ const Scene = () => {
     
     
       <MenuItem style = {locStyle.styles} icon={<FaMusic />} >  <a
-  href="https://youtu.be/Rq-bT7Gw5hQ" style = {{all: "inherit"}}>Music</a></MenuItem>
+  href="https://youtu.be/jncOwmnfk7Y" style = {{all: "inherit"}}>Music</a></MenuItem>
   </Menu>
   </ProSidebar>
   </div>
@@ -193,10 +193,10 @@ const Scene = () => {
     <div className= { `${styles["w3-col"]}  ${styles["m6"]}`  }>
       <h3>About me</h3>
       <p>As an enthusiastic and motivated Master student in the Computer Science department of ETHZ, <br />I strive to learn more about Machine Learning and Information Security, as well as fields which intertwine both domains. I am a result-oriented coder, a team player who can also work independently. I can program in several programming languages wherein I prioritize code clarity as well as speed.</p>
-      <p><a href="mailto:amro.abdrabo@gmail.com" className = {`${styles["w3-button"]} ${styles["w3-black"]} `} > <FaEnvelope style ={{verticalAlign: "sub"}} /> Contact me</a></p>
+      <p><a href="mailto:amro.abdrabo@gmail.com" className = {`${styles["w3-button"]} ${styles["w3-black"]} `} style={{borderRadius:"5px"}}> E<FaEnvelope style ={{verticalAlign: "sub", paddingBottom: "3px"}}/>ail </a></p>
     </div>
     <div className ={ `${styles["w3-col"]}  ${styles["m6"]}`  }>
-      <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/mask22.png"} alt="me" width={ isMobile ? "300 px" : "535 px"} height={ isMobile ? "280 px" : "470 px"} style  = {{marginTop: `${isMobile ? "40px" : "auto"}`,  marginLeft: `${isMobile ? "auto" : "4cm"}` }}/>
+      <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/mask22.png"} alt="me" width={ isMobile ? "300 px" : "535 px"} height={ isMobile ? "280 px" : "470 px"} style  = {{marginTop: `${isMobile ? "40px" : "auto"}`, boxShadow: "2px 7px 20px rgba(0, 0, 0, 0.1)", marginLeft: `${isMobile ? "auto" : "4cm"}` }}/>
     </div>
   </div>
  </div>
@@ -366,22 +366,21 @@ the final implementation in Python which can be found <a href = "https://github.
   <h1 style = {{color: "#AE0096", paddingLeft: "3vw", paddingTop: "30px", marginTop: "0",backgroundColor: "#E2FFFD", marginBottom: "0", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Experience</h1>
    <div style = {{paddingTop: "60px", backgroundColor: "#E2FFFD", paddingBottom: "10vw"}}>
 
-      <div className={timeline_style["timeline"]}>
+      <div className={timeline_style["timeline"]} style = {{boxShadow: "20px 40px 20px rgba(0, 0, 0, 0.2)"}}>
 
       <div className={`${timeline_style["container"]} ${timeline_style["right"]}`} >
           <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
-          <img src={"/img/eceth.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"84%"}} />
+          <img src={"/img/dalle_rocket3.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"68%"}} />
             <h2 style={{marginTop: "20px"}}>Feb 2023 - Jul</h2>
             <p>
-             React Software Engineer at ETH Entrepreneur Club <br/> <p style={{color: "gray"}}> Web Platforms for ETH Startups <br/>
+             React Software Engineer at Apollo <br/> <p style={{color: "gray"}}> Web Platforms for ETH Startups <br/>
              <ul>
-                <li> VC onboarding functionality for <a href="https://rocket-hub.ch" style={{fontSize: "medium"}}>Rockethub</a>  </li>
+                <li> VC onboarding functionality for Apollo, a web-application connecting ETH startups to mentors and VCs </li>
                 <li> Functionality to reject startup applications and delete startups </li>
                 <li> Functionality to remove members from startup </li>
                 <li> Functionality to upload logos and wall plaques (images with description of startup) </li>
                 <li> Proposed new design for landing page </li>
                 <li> Remove cap of 5 members for each startup </li>
-                <li> Fix bug disabling adding perks for supporters </li>
               </ul>
             </p>
              </p>
