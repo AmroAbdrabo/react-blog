@@ -33,16 +33,16 @@ function App() {
 return (
   <>
     <HashRouter>
-      <Switch>
-        <Route exact path="/" element={<Start />} />
+    <Routes>
+        <Route index element={<Start />} />
         <Route path="/blog/ml" element={<MlPage />} />
         <Route path="/blog/security" element={<SecPage />} />
         <Route path="/blog/alg" element={<AlPage />} />
         <Route path="/blog/life" element={<ExPage />} />
         <Route path="/blog/security/pass" element={<Pass />} />
         <Route path="/blog/security/syssec" element={<Syssec />} />
-      </Switch>
-    </HashRouter>
+    </Routes>
+  </HashRouter>
   </>
 );
 }

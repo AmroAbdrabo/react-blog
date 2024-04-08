@@ -368,26 +368,26 @@ the final implementation in Python which can be found <a href = "https://github.
 
       <div className={timeline_style["timeline"]} style = {{boxShadow: "20px 40px 20px rgba(0, 0, 0, 0.2)"}}>
 
+      
+
       <div className={`${timeline_style["container"]} ${timeline_style["right"]}`} >
           <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
-          <img src={"/img/dalle_rocket3.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"68%"}} />
+          <img src={"/img/dalle_rocket3.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"84%"}} />
             <h2 style={{marginTop: "20px"}}>Feb 2023 - Jul</h2>
             <p>
-             React Software Engineer at Apollo <br/> <p style={{color: "gray"}}> Web Platforms for ETH Startups <br/>
+             React Software Engineer at Apollo <br/> <p style={{color: "gray"}}> Web Platform for ETH Startups <br/>
              <ul>
-                <li> VC onboarding functionality for Apollo, a web-application connecting ETH startups to mentors and VCs </li>
+                <li> VC onboarding functionality  </li>
                 <li> Functionality to reject startup applications and delete startups </li>
                 <li> Functionality to remove members from startup </li>
                 <li> Functionality to upload logos and wall plaques (images with description of startup) </li>
                 <li> Proposed new design for landing page </li>
-                <li> Remove cap of 5 members for each startup </li>
+                <li> Remove cap on number of members per startup </li>
               </ul>
             </p>
              </p>
           </div>
         </div>
-
-
 
         <div className={`${timeline_style["container"]} ${timeline_style["left"]}`} >
           <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
