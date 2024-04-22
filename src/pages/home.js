@@ -369,15 +369,29 @@ the final implementation in Python which can be found <a href = "https://github.
       <div className={timeline_style["timeline"]} style = {{boxShadow: "20px 40px 20px rgba(0, 0, 0, 0.2)"}}>
 
 
-      <div className={`${timeline_style["container"]} ${timeline_style["left"]}`} >
+      <div className={`${timeline_style["container"]} ${timeline_style["right"]}`} >
           <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
-          <img src={"/img/bridgenerate.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto", borderRadius: "9px", width:"64%"}} />
+          <img src={"/img/bridgenerate.PNG"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto", borderRadius: "9px", width:"64%"}} />
             <h2 style={{marginTop: "20px"}}>Feb 2024 - Present</h2>
             <p>
              Founder at Bridgenerate <br/> <p style={{color: "gray"}}> Bridge generation platform <br/>
              <ul>
                 <li> Parametric generation of bridges using Next TS + FastAPI.  </li>
-                <li> Web app generates OBJ file and ANSYS. </li>
+                <li> Web app generates OBJ file and ANSYS script for generation in ANSYS WB. </li>
+              </ul>
+            </p>
+             </p>
+          </div>
+        </div>
+
+        <div className={`${timeline_style["container"]} ${timeline_style["left"]}`} >
+          <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
+          <img src={"/img/irmos.jpg"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto", borderRadius: "9px", width:"48%"}} />
+            <h2 style={{marginTop: "20px"}}>Feb 2024 - Present</h2>
+            <p>
+             Student Researcher at Irmos Technologies <br/> <p style={{color: "gray"}}> Leading Structural Health Monitoring in Switzerland <br/>
+             <ul>
+                <li> Investigated and applied methods for continuous structural health monitoring of bridges using vibration time series data.  </li>
               </ul>
             </p>
              </p>
