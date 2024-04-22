@@ -114,7 +114,7 @@ body {
 }
 
 .post-data {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 2rem 3rem;
     position: relative;
     flex-basis: 60%;

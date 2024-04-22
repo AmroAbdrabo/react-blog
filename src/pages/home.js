@@ -368,11 +368,27 @@ the final implementation in Python which can be found <a href = "https://github.
 
       <div className={timeline_style["timeline"]} style = {{boxShadow: "20px 40px 20px rgba(0, 0, 0, 0.2)"}}>
 
+
+      <div className={`${timeline_style["container"]} ${timeline_style["left"]}`} >
+          <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
+          <img src={"/img/bridgenerate.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto", borderRadius: "9px", width:"64%"}} />
+            <h2 style={{marginTop: "20px"}}>Feb 2024 - Present</h2>
+            <p>
+             Founder at Bridgenerate <br/> <p style={{color: "gray"}}> Bridge generation platform <br/>
+             <ul>
+                <li> Parametric generation of bridges using Next TS + FastAPI.  </li>
+                <li> Web app generates OBJ file and ANSYS. </li>
+              </ul>
+            </p>
+             </p>
+          </div>
+        </div>
+
       
 
       <div className={`${timeline_style["container"]} ${timeline_style["right"]}`} >
           <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
-          <img src={"/img/dalle_rocket3.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"84%"}} />
+          <img src={"/img/dalle_rocket3.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", borderRadius: "9px", marginRight: "auto",width:"84%"}} />
             <h2 style={{marginTop: "20px"}}>Feb 2023 - Jul</h2>
             <p>
              React Software Engineer at Apollo <br/> <p style={{color: "gray"}}> Web Platform for ETH Startups <br/>
