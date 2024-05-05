@@ -1,7 +1,8 @@
 import * as THREE from "three";
 import SmoothScroll from "./smoothscroll";
-import React, { useRef, Suspense, useState, useEffect } from "react";
+import React, { useRef, Suspense, useState, useEffect} from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import TimelineCard from './timelinecard';
 import { Canvas, extend, useFrame, useLoader } from "@react-three/fiber";
 import { shaderMaterial,  OrbitControls } from "@react-three/drei";
 import glsl from "babel-plugin-glsl/macro";
@@ -141,6 +142,32 @@ const Scene = () => {
   }
   var imgWidth = "420 px"
   var imgHeight = "350 px"
+
+
+  // Slide-in for timeline starts only on user scroll
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running'; // Start the animation
+        }
+      });
+    }, { threshold: 0.1 }); // Configure it to trigger when 50% of the item is visible
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
+
+
 
   // smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -366,115 +393,85 @@ the final implementation in Python which can be found <a href = "https://github.
   <h1 style = {{color: "#AE0096", paddingLeft: "3vw", paddingTop: "30px", marginTop: "0",backgroundColor: "#E2FFFD", marginBottom: "0", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Experience</h1>
    <div style = {{paddingTop: "60px", backgroundColor: "#E2FFFD", paddingBottom: "10vw"}}>
 
-      <div className={timeline_style["timeline"]} style = {{boxShadow: "20px 40px 20px rgba(0, 0, 0, 0.2)"}}>
+      <div  className={timeline_style["timeline"]} style = {{boxShadow: "20px 40px 20px rgba(0, 0, 0, 0.2)"}}>
 
+        <TimelineCard
+          timeline_style={timeline_style}
+          slideDirection="-100%"
+          imgSrc="/img/bridgenerate.PNG"
+          dir="left"
+          title="Feb 2024 - Present"
+          companyDesc="Bridge generation web application"
+          description="Founder at Bridgenerate"
+          listItems={[
+            "Parametric generation of bridges using Next TS + FastAPI.",
+            "Web app generates OBJ file and ANSYS script for generation in ANSYS WB.",
+            <span key="videoLink">First phase complete: <a href="https://youtu.be/keJFd0w89Qk">Click here for demo</a></span>
+          ]}
+        />
 
-      <div className={`${timeline_style["container"]} ${timeline_style["right"]}`} >
-          <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
-          <img src={"/img/bridgenerate.PNG"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto", borderRadius: "9px", width:"64%"}} />
-            <h2 style={{marginTop: "20px"}}>Feb 2024 - Present</h2>
-            <p>
-             Founder at Bridgenerate <br/> <p style={{color: "gray"}}> Bridge generation platform <br/>
-             <ul>
-                <li> Parametric generation of bridges using Next TS + FastAPI.  </li>
-                <li> Web app generates OBJ file and ANSYS script for generation in ANSYS WB. </li>
-              </ul>
-            </p>
-             </p>
-          </div>
-        </div>
+        <TimelineCard
+          timeline_style={timeline_style}
+          slideDirection="100%"
+          dir = "right"
+          imgSrc="/img/irmos.png"
+          title="Aug 2023 - Feb 2024"
+          companyDesc="Leading structural health monitoring startup in Switzerland"
+          description="Student Researcher at Irmos Technologies"
+          listItems={[
+            "Investigated and applied machine learning methods for continuous structural health monitoring of bridges using vibration time series data.",
+            "Identified limitations with current structural health monitoring approaches and proposed workarounds."
+          ]}
+        />
 
-        <div className={`${timeline_style["container"]} ${timeline_style["left"]}`} >
-          <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
-          <img src={"/img/irmos.jpg"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto", borderRadius: "9px", width:"48%"}} />
-            <h2 style={{marginTop: "20px"}}>Feb 2024 - Present</h2>
-            <p>
-             Student Researcher at Irmos Technologies <br/> <p style={{color: "gray"}}> Leading Structural Health Monitoring in Switzerland <br/>
-             <ul>
-                <li> Investigated and applied methods for continuous structural health monitoring of bridges using vibration time series data.  </li>
-              </ul>
-            </p>
-             </p>
-          </div>
-        </div>
+        <TimelineCard
+          timeline_style={timeline_style}
+          slideDirection="-100%"
+          dir = "left"
+          imgSrc="/img/juniors.jpg"
+          title="Nov 2022 - Jan 2023"
+          companyDesc="Largest student-led consultancy in Switzerland"
+          description="Fullstack Software Engineer at ETH Juniors"
+          listItems={[
+            "Worked across the entire stack in C#, JS, HTML, Python, Docker (full stack development)",
+            "Reduced backend processing time by around 23%",
+            "Designed architecture and identified security risks for guest login",
+            "Designed computational geometric methods for scale determination",
+            "Resume and pause 3D model computation",
+            "Applied statistical techniques to enhance 3D models",
+            "Presented in both English and German",
+            <a href="https://drive.google.com/file/d/1WWxluVRb9SrL0tdiHFaem_rI1UOWJ4Vh/view?usp=sharing">All reference letters</a>
+          ]}
+        />
 
-      
+        <TimelineCard
+          timeline_style={timeline_style}
+          slideDirection="100%"
+          dir = "right"
+          imgSrc="/img/epfl.png"
+          title="Aug 2019 - Dec"
+          companyDesc=""
+          description="Student Teaching Assistant in Analysis at EPFL"
+          listItems={[
+            "Supervised by Prof. Dr. Lachowska."
+          ]}
+        />  
 
-      <div className={`${timeline_style["container"]} ${timeline_style["right"]}`} >
-          <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
-          <img src={"/img/dalle_rocket3.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", borderRadius: "9px", marginRight: "auto",width:"84%"}} />
-            <h2 style={{marginTop: "20px"}}>Feb 2023 - Jul</h2>
-            <p>
-             React Software Engineer at Apollo <br/> <p style={{color: "gray"}}> Web Platform for ETH Startups <br/>
-             <ul>
-                <li> VC onboarding functionality  </li>
-                <li> Functionality to reject startup applications and delete startups </li>
-                <li> Functionality to remove members from startup </li>
-                <li> Functionality to upload logos and wall plaques (images with description of startup) </li>
-                <li> Proposed new design for landing page </li>
-                <li> Remove cap on number of members per startup </li>
-              </ul>
-            </p>
-             </p>
-          </div>
-        </div>
-
-        <div className={`${timeline_style["container"]} ${timeline_style["left"]}`} >
-          <div className={timeline_style["content"]} style = {{paddingBottom: "50px"}}>
-          <img src={"/img/juniors.jpg"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"60%"}} />
-            <h2 style={{marginTop: "20px"}}>Nov 2022 - Jan 2023</h2>
-            <p>
-             Fullstack Software Engineer at ETH Juniors <br/> <p style={{color: "gray"}}> Developing photogrammetry software <br/>
-              <ul>
-                <li> Worked across the entire stack in C#, JS, HTML, Python, Docker (full stack development)  </li>
-                <li> Reduced backend processing time by around 23% </li>
-                <li> Designed architecture and identified security risks for guest login </li>
-                <li> Designed computational geometric methods for scale determination </li>
-                <li> Resume and pause 3D model computation </li>
-                <li> Used statistical techniques to enhance 3D models </li>
-                <li> Presented in both English and German </li>
-                
-              </ul>
-              <a href="https://drive.google.com/file/d/1WWxluVRb9SrL0tdiHFaem_rI1UOWJ4Vh/view?usp=sharing">All reference letters</a> (as one pdf)
-              
-            </p>
-             </p>
-          </div>
-        </div>
-        <div className={`${timeline_style["container"]} ${timeline_style["right"]}`}>
-          <div className={timeline_style["content"]}>
-          <img src={"/img/epfl.png"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"40%"}} />
-            <h2 style={{marginTop: "20px"}}>Sept 2019 - Dec </h2>
-            <p>
-            Student teaching assistant in Analysis at EPFL
-            <p style={{color: "gray"}}> supervised by Prof. Dr. Lachowska </p>
-             
-            </p>
-          </div>
-        </div>
-        <div className={`${timeline_style["container"]} ${timeline_style["left"]}`}>
-          <div className={timeline_style["content"]}>
-          <img src={"/img/dawson.jpg"} alt="Avatar" style={{boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto",width:"48%"}} />
-          <h2 style={{marginTop: "20px"}}>May 2015 - Jun</h2>
-            <p>
-            Group Summer Internship on Brain Imaging at Dawson College and Cerebral Imaging Centre 
-            <p style={{color: "gray"}}>Phase correction for MRI signal acquisition under supervision of Prof. Dr. Nadeau.  <br/>
-         <a href="https://www.slideshare.net/MyriamDimanche/brainimaging2015100622h29-70517931">Final Presentation</a>  </p>
-            </p>
-          </div>
-        </div>
-        
+        <TimelineCard
+          timeline_style={timeline_style}
+          slideDirection="-100%"
+          dir = "left"
+          imgSrc="/img/dawson.jpg"
+          title="May 2015 - Aug"
+          companyDesc=""
+          description="Summer Internship on Brain Imaging at Dawson College and Cerebral Imaging Centre"
+          listItems={[
+            "Phase correction for MRI signal acquisition under supervision of Prof. Dr. Nadeau.",
+            <a href="https://www.slideshare.net/MyriamDimanche/brainimaging2015100622h29-70517931">Final Presentation</a>
+          ]}
+        /> 
       </div>
-      </div>
-
-
-
-
-
-
-    
-
-
+    </div>
       </>
     );
   };

@@ -42,13 +42,29 @@
 		background: linear-gradient( rgb(93, 0, 255), black);
 	}
 }
-  
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(var(--slide-direction));
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
   /* Container around content */
   .container {
     padding: 10px 40px;
     position: relative;
     background-color: inherit;
     width: 50%;
+    --slide-direction: -100%;  /* Default slide from left */
+    animation: slideIn 0.7s ease-in forwards; /* Adjust duration and easing according to your preference */
+    animation-play-state: paused; /* Initially pause the animation */
+
   }
   
   /* The circles on the timeline */
