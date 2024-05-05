@@ -34,7 +34,6 @@ const TimelineCard = ({
     };
   }, [containerRef]);
 
-  if (window.innerWidth > 700) {
     return (
         <div ref={containerRef} className={`${timeline_style["container"]} ${timeline_style[dir]}`} style={{ '--slide-direction': slideDirection }}>
           <div className={timeline_style["content"]} style={{ paddingBottom: "50px" }}>
@@ -52,26 +51,6 @@ const TimelineCard = ({
           </div>
         </div>
       );
-  }
-  else {
-    return (
-        <div className={`${timeline_style["container"]} ${timeline_style[dir]}`}>
-          <div className={timeline_style["content"]} style={{ paddingBottom: "50px" }}>
-            <img src={imgSrc} alt="Avatar" style={{ boxSizing: "border-box", display: "block", marginLeft: "auto", marginRight: "auto", borderRadius: "9px", width: "48%" }} />
-            <h2 style={{ marginTop: "20px", fontWeight: 500, fontFamily: ["Segoe UI", "sans-serif", "Avenir"]}}>{title}</h2>
-            <p>{description}</p>
-            <p style={{ color: "gray" }}>
-              {companyDesc}
-              <ul>
-                {listItems.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </p>
-          </div>
-        </div>
-      );
-  }
   
 };
 
