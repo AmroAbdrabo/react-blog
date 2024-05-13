@@ -12,10 +12,13 @@ import 'react-pro-sidebar/dist/css/styles.css';
 import styles from './../styling/frontpage.module.css'
 import timeline_style from './../styling/timeline.module.css'
 import flip from './../styling/flipcard.module.css'
-import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaEnvelope, FaHeart, FaBiking, FaMicroblog, FaYoutube, FaMusic, FaTh } from 'react-icons/fa';
+import hackstyle from './../styling/hackathon.module.css'
+import hackathons from './hackathonData'; // Importing the hackathons array
+import { FaGithub, FaSkiing, FaEnvelope, FaBiking, FaMicroblog, FaMusic, FaSkating } from 'react-icons/fa';
 //import "./../styling/sidebar.css";
 
 import useScript from './../components/hooks/useScript';
+import HackathonDisplay from "./HackathonDisplay";
 
 const WaveShaderMaterial = shaderMaterial(
   // Uniform
@@ -190,6 +193,9 @@ const Scene = () => {
     <ProSidebar onMouseEnter={expandSide} onClick = {expandSide} onMouseLeave={collapseSide}  collapsed = {isCollapsed}>
     <Menu iconShape="square">
     <MenuItem style = {locStyle.styles} icon={<FaBiking />}> <a href="#aboutMe" style = {{all: "inherit"}}>About me</a> </MenuItem>
+    <MenuItem style = {locStyle.styles} icon={<FaSkiing />}> <a href="#experience" style = {{all: "inherit"}}>Experience</a> </MenuItem>
+    <MenuItem style = {locStyle.styles} icon={<FaSkating />}> <a href="#hacks" style = {{all: "inherit"}}>Hackathons</a> </MenuItem>
+
       <SubMenu title="Blogs" icon={<FaMicroblog />}  style = {locStyle.styles}>
         <MenuItem style = {locStyle.styles}> <a href="https://amroabdrabo.github.io/#/blog/security" style = {{fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Cyber Security </a> </MenuItem>
         <MenuItem style = {locStyle.styles}> <a href="https://amroabdrabo.github.io/#/blog/ml" style = {{ fontWeight: "600", fontSize: "medium", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Machine Learning </a>  </MenuItem>
@@ -223,7 +229,7 @@ const Scene = () => {
       <p><a href="mailto:amro.abdrabo@gmail.com" className = {`${styles["w3-button"]} ${styles["w3-black"]} `} style={{borderRadius:"5px"}}> E<FaEnvelope style ={{verticalAlign: "sub", paddingBottom: "3px"}}/>ail </a></p>
     </div>
     <div className ={ `${styles["w3-col"]}  ${styles["m6"]}`  }>
-      <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/mask22.png"} alt="me" width={ isMobile ? "300 px" : "535 px"} height={ isMobile ? "280 px" : "470 px"} style  = {{marginTop: `${isMobile ? "40px" : "auto"}`, boxShadow: "2px 7px 20px rgba(0, 0, 0, 0.1)", marginLeft: `${isMobile ? "auto" : "4cm"}` }}/>
+      <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/maskfr.png"} alt="me" width={ isMobile ? "300 px" : "415 px"} height={ isMobile ? "280 px" : "450 px"} style  = {{marginTop: `${isMobile ? "40px" : "auto"}`, boxShadow: "2px 7px 20px rgba(0, 0, 0, 0.1)", marginLeft: `${isMobile ? "auto" : "4cm"}` }}/>
     </div>
   </div>
  </div>
@@ -380,26 +386,16 @@ the final implementation in Python which can be found <a href = "https://github.
 </div>
 
 
-
-
-
-
- 
-
-
-
-
-
-  <h1 style = {{color: "#AE0096", paddingLeft: "3vw", paddingTop: "30px", marginTop: "0",backgroundColor: "#E2FFFD", marginBottom: "0", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Experience</h1>
+  <h1 id="experience" style = {{color: "#AE0096", paddingLeft: "3vw", paddingTop: "30px", marginTop: "0", backgroundColor: "#E2FFFD", marginBottom: "0", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Experience</h1>
    <div style = {{paddingTop: "60px", backgroundColor: "#E2FFFD", paddingBottom: "10vw"}}>
 
-      <div  className={timeline_style["timeline"]} style = {{boxShadow: "20px 40px 20px rgba(0, 0, 0, 0.2)"}}>
+      <div  className={timeline_style["timeline"]} style = {{ boxShadow: "20px 40px 20px rgba(0, 0, 0, 0.2)"}}>
 
         <TimelineCard
           timeline_style={timeline_style}
-          slideDirection="-100%"
+          slideDirection="100%"
           imgSrc="/img/bridgenerate.PNG"
-          dir="left"
+          dir="right"
           title="Feb 2024 - Present"
           companyDesc="Bridge generation web application"
           description="Founder at Bridgenerate"
@@ -412,15 +408,33 @@ the final implementation in Python which can be found <a href = "https://github.
 
         <TimelineCard
           timeline_style={timeline_style}
-          slideDirection="100%"
-          dir = "right"
+          slideDirection="-100%"
+          dir = "left"
           imgSrc="/img/irmos.png"
           title="Aug 2023 - Feb 2024"
           companyDesc="Leading structural health monitoring startup in Switzerland"
           description="Student Researcher at Irmos Technologies"
           listItems={[
             "Investigated and applied machine learning methods for continuous structural health monitoring of bridges using vibration time series data.",
-            "Identified limitations with current structural health monitoring approaches and proposed workarounds."
+            "Identified limitations with current structural health monitoring approaches and proposed workarounds.",
+            <span key="videoLink"> Click: <a href="https://drive.google.com/file/d/1HjKuPZgkyEHud2wLvXg9mAsLS4qRCnKO/view?usp=sharing">Reference letter</a></span>
+          ]}
+        />
+
+      <TimelineCard
+          timeline_style={timeline_style}
+          slideDirection="100%"
+          dir = "right"
+          imgSrc="/img/dalle_rocket3.png"
+          title="Feb 2023 - Jul"
+          companyDesc="Startup incubation platform"
+          description="React Fullstack Software Developer at Apollo"
+          listItems={[
+            "Developed Apollo, a cutting-edge startup incubation platform.",
+            "Features include (but not limited to): startups applying for a place at the Apollo workspace, ",
+            "Scheduling events and communication inbox between workspace maanger and startups, ",
+            "Admins add members to startups, and startups to add their own members and have a profile for their company",
+            <span key="videoLink">Partial demo available: <a href="https://youtu.be/YYb38G4rH9E"> here</a></span>
           ]}
         />
 
@@ -472,7 +486,29 @@ the final implementation in Python which can be found <a href = "https://github.
         /> 
       </div>
     </div>
-      </>
+
+
+    <h1 id="hacks" style = {{color: "#50B191",paddingLeft: "3vw", paddingTop: "30px", backgroundColor: "#061233", marginTop: "0", marginBottom: "0", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Hackathons</h1>
+      <div style = {{paddingTop: "60px", backgroundColor: "#061233", border: "0px solid red", paddingBottom: "10vw"}}> 
+      <div width="60%">
+        <div className={hackstyle['hackathon-cards-container']}>
+        
+          {hackathons.map((hackathon, index) => (
+          <HackathonDisplay
+            key={index}
+            name={hackathon.name}
+            date={hackathon.date}
+            description={hackathon.description}
+            imageUrlLeft={hackathon.imageUrlLeft}
+            imageUrlRight={hackathon.imageUrlRight}
+          />
+          
+          ))}
+          </div>
+        <div/>
+      </div>
+    </div>
+  </>
     );
   };
   

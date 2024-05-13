@@ -1,0 +1,31 @@
+/* Styles for the hackathon cards container */
+.hackathon-cards-container {
+    display: grid;
+    padding: auto;
+    margin: auto;
+    border-style: solid;
+    border-width: 0px;
+    border-color: aliceblue;
+    grid-template-columns: repeat(4, 1fr); /* 3 columns by default */
+    gap: 90px; /* spacing between items */
+    width: 82%;
+    margin-bottom: 150px;
+  }
+
+  @media (max-width: 1024px) { /* For tablets and small desktops */
+    .hackathon-cards-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+  }
+  
+  @media (max-width: 768px) { /* For landscape phones and small tablets */
+    .hackathon-cards-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+  }
+  
+  @media (max-width: 480px) { /* For portrait phones */
+    .hackathon-cards-container {
+      grid-template-columns: 1fr; /* 1 column */
+    }
+  }
