@@ -121,7 +121,7 @@ class HackathonDisplay extends React.Component {
         >
           <div style={styles.title}>{name}</div>
           <div style={styles.date}>{date}</div>
-          <div style={styles.description}>{description}</div>
+          <div style={styles.description} dangerouslySetInnerHTML={{__html: description}}></div>
         </div>
       </div>
     );

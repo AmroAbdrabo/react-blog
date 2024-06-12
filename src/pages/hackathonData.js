@@ -3,14 +3,14 @@ const hackathons = [
     {
         name: "AI for Good - Entrepreneur First x Visium",
         date: "April 14, 2024 - 📍 Lausanne",
-        description: "Study and development of a tool for early disease detection using privacy-preserving AI-driven retinal scans. Winner of Visium's AI for Good 48h-Hackathon.",
+        description: "Study and development of a tool for early disease detection using privacy-preserving AI-driven retinal scans. Winner of Visium's AI for Good 48h-Hackathon. Presentation: <a style='color:cyan;' href='https://docs.google.com/presentation/d/1ilHrtiosoySw6PnFe_GQsdXXGXybguQ_/'>link</a>.",
         imageUrlLeft: "/img/visleft.jpg",
         imageUrlRight: "/img/visright.jpg"
     },
     {
         name: "Datathon - ETH Analytics Club",
         date: "April 28, 2024 - 📍 Zürich",
-        description: "Largest ML hackathon in Switzerland. Time-series forecasting on electricity consumption. Third-lowest forecast error for APLIQ's clients in Italy and Spain.",
+        description: "Largest ML hackathon in Switzerland. Time-series forecasting on electricity consumption. Third-lowest forecast error for APLIQ's clients in Italy and Spain. Code: <a style='color:cyan;' href='https://drive.google.com/file/d/1NamldLwgoUqs_aFBn5TVi2PybF3svW3s/view?usp=sharing'>link</a>.",
         imageUrlLeft: "/img/ldace.jpg",
         imageUrlRight: "/img/rdace.jpg"
     },

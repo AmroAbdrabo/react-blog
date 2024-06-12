@@ -215,7 +215,7 @@ const Scene = () => {
     <div  style = {{ width: '100%', position:'absolute', textAlign:'center', height: '100%' }}>
             <h1 style = {{margin:'auto', verticalAlign: 'middle', color: 'white', 
             fontFamily:"'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-            left: "50%", position: "absolute",  top: "12%", zIndex: "1",
+            left: "50%", position: "absolute",  top: "12%", zIndex: "1", 
             fontWeight: "50", transform: "translate(-50%, -50%)"}}> Amro A. </h1>
             <Scene style = {{width: '100%', zIndex: '-1' }}/>
     </div>
@@ -229,7 +229,7 @@ const Scene = () => {
       <p><a href="mailto:amro.abdrabo@gmail.com" className = {`${styles["w3-button"]} ${styles["w3-black"]} `} style={{borderRadius:"5px"}}> E<FaEnvelope style ={{verticalAlign: "sub", paddingBottom: "3px"}}/>ail </a></p>
     </div>
     <div className ={ `${styles["w3-col"]}  ${styles["m6"]}`  }>
-      <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/maskfr.png"} alt="me" width={ isMobile ? "300 px" : "415 px"} height={ isMobile ? "280 px" : "450 px"} style  = {{marginTop: `${isMobile ? "40px" : "auto"}`, boxShadow: "2px 7px 20px rgba(0, 0, 0, 0.1)", marginLeft: `${isMobile ? "auto" : "4cm"}` }}/>
+      <img className = {`${styles["w3-image "]} ${styles["w3-round-large"]}`} src={"/img/maskfr.png"} alt="me" width={ isMobile ? "280 px" : "415 px"} height={ isMobile ? "310 px" : "450 px"} style  = {{marginTop: `${isMobile ? "40px" : "auto"}`, boxShadow: "2px 7px 20px rgba(0, 0, 0, 0.1)", marginLeft: `${isMobile ? "auto" : "4cm"}` }}/>
     </div>
   </div>
  </div>
