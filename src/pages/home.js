@@ -434,7 +434,7 @@ the final implementation in Python which can be found <a href = "https://github.
             "Features include (but not limited to): startups applying for a place at the Apollo workspace, ",
             "Scheduling events and communication inbox between workspace maanger and startups, ",
             "Admins add members to startups, and startups to add their own members and have a profile for their company",
-            <span key="videoLink">Partial demo available: <a href="https://youtu.be/YYb38G4rH9E"> here</a></span>
+            <span key="videoLink">Partial demo available: <a href="https://www.youtube.com/playlist?list=PLkUCCIf_X7Roo-i0UDMFZNKY2JP4fadO7"> here</a></span>
           ]}
         />
 
