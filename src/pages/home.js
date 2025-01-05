@@ -390,22 +390,6 @@ the final implementation in Python which can be found <a href = "https://github.
    <div style = {{paddingTop: "60px", backgroundColor: "#E2FFFD", paddingBottom: "10vw"}}>
 
       <div  className={timeline_style["timeline"]} style = {{ boxShadow: "20px 40px 20px rgba(0, 0, 0, 0.2)"}}>
-
-        <TimelineCard
-          timeline_style={timeline_style}
-          slideDirection="100%"
-          imgSrc="/img/bridgenerate.PNG"
-          dir="right"
-          title="Feb 2024 - Present"
-          companyDesc="Bridge generation web application"
-          description="Founder at Bridgenerate"
-          listItems={[
-            "Parametric generation of bridges using Next TS + FastAPI.",
-            "Web app generates OBJ file and ANSYS script for generation in ANSYS WB.",
-            <span key="videoLink">First phase complete: <a href="https://youtu.be/keJFd0w89Qk">Click here for demo</a></span>
-          ]}
-        />
-
         <TimelineCard
           timeline_style={timeline_style}
           slideDirection="-100%"
@@ -488,9 +472,9 @@ the final implementation in Python which can be found <a href = "https://github.
     </div>
 
 
-    <h1 id="hacks" style = {{color: "#50B191",paddingLeft: "3vw", paddingTop: "30px", backgroundColor: "#061233", marginTop: "0", marginBottom: "0", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Hackathons</h1>
+    <h1 id="hacks" style = {{color: "#50B191",paddingLeft: "3vw", border: "0px solid blue", paddingTop: "30px", backgroundColor: "#061233", marginTop: "0", marginBottom: "0", fontFamily: `${locStyle["styles"]["fontFamily"]}`}}>Hackathons</h1>
       <div style = {{paddingTop: "60px", backgroundColor: "#061233", border: "0px solid red", paddingBottom: "10vw"}}> 
-      <div width="60%">
+      <div style={{border: "0px solid green", width: "100%"}}>
         <div className={hackstyle['hackathon-cards-container']}>
         
           {hackathons.map((hackathon, index) => (
@@ -501,6 +485,7 @@ the final implementation in Python which can be found <a href = "https://github.
             description={hackathon.description}
             imageUrlLeft={hackathon.imageUrlLeft}
             imageUrlRight={hackathon.imageUrlRight}
+            invisible={hackathon.invisible}
           />
           
           ))}

@@ -8,34 +8,35 @@ const styles = {
     width: '300px',
     maxWidth: '400px',
     height: '300px',
-    margin: "auto",
+    margin: 'auto',
     borderRadius: '8px',
     overflow: 'hidden',
     boxSizing: 'border-box', // Includes padding and border
     boxShadow: '5px 4px 15px rgba(255,255,255,0.9)',
-    border: "0px solid green",
-    backgroundColor: "white",
+    border: '0px solid green',
+    backgroundColor: 'white',
     cursor: 'pointer',
+  },
+  invisibleContainer: {
+    height: 0,
+    visibility: 'hidden', // Makes it invisible but retains space
   },
   imageHalf: {
     position: 'absolute',
     width: '50%',
     height: '100%',
-    border: "0px solid red",
-    backgroundRepeat: "no-repeat",
+    backgroundRepeat: 'no-repeat',
     transition: 'transform 0.5s ease-out',
     backgroundSize: 'contain',
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
   },
   leftHalf: {
     left: 0,
     backgroundPosition: 'right',
-    backgroundImage: `url('')` // Placeholder for left half image URL
   },
   rightHalf: {
     right: 0,
     backgroundPosition: 'left',
-    backgroundImage: `url('')` // Placeholder for right half image URL
   },
   text: {
     position: 'absolute',
@@ -45,10 +46,7 @@ const styles = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    margin: 'auto',
-    marginTop: "0%",
-    paddingLeft: "0%",
-    justifyContent: 'top',
+    justifyContent: 'center',
     alignItems: 'center',
     color: '#fff',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -56,44 +54,39 @@ const styles = {
     transition: 'opacity 0.5s ease-in',
   },
   title: {
-    marginTop: "10px",
-    paddingLeft: "9%",
     fontSize: '24px',
+    textAlign: 'center',
+    width: '90%'
   },
   date: {
-    margin: "auto",
-    marginBottom: "2%",
-    marginTop: "0",
-    border: "0px solid green",
     fontSize: '18px',
   },
   description: {
+    width: '80%',
     fontSize: '16px',
-    marginTop: "0",
-    left: "0",
-    marginLeft: "1%",
-    border: "0px solid red",
     textAlign: 'left',
-    padding: '0 10px',
-  }
+  },
 };
 
 class HackathonDisplay extends React.Component {
   state = {
-    hovered: false
+    hovered: false,
   };
 
   toggleHover = () => {
-    this.setState(prevState => ({ hovered: !prevState.hovered }));
+    this.setState((prevState) => ({ hovered: !prevState.hovered }));
   };
 
   render() {
-    const { name, date, description, imageUrlLeft, imageUrlRight} = this.props;
+    const { name, date, description, imageUrlLeft, imageUrlRight, invisible } = this.props;
     const { hovered } = this.state;
-    
+
     return (
-      <div 
-        style={styles.container}
+      <div
+        style={{
+          ...styles.container,
+          ...(invisible ? styles.invisibleContainer : {}),
+        }}
         onMouseEnter={this.toggleHover}
         onMouseLeave={this.toggleHover}
       >
@@ -121,7 +114,10 @@ class HackathonDisplay extends React.Component {
         >
           <div style={styles.title}>{name}</div>
           <div style={styles.date}>{date}</div>
-          <div style={styles.description} dangerouslySetInnerHTML={{__html: description}}></div>
+          <div
+            style={styles.description}
+            dangerouslySetInnerHTML={{ __html: description }}
+          ></div>
         </div>
       </div>
     );

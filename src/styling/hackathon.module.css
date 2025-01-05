@@ -6,26 +6,37 @@
     border-style: solid;
     border-width: 0px;
     border-color: aliceblue;
-    grid-template-columns: repeat(4, 1fr); /* 3 columns by default */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
     gap: 90px; /* spacing between items */
     width: 82%;
     margin-bottom: 150px;
   }
 
-  @media (max-width: 1024px) { /* For tablets and small desktops */
+
+ /* Medium-large screens (between 768px and 1024px) */
+@media (min-width: 1600px) {
+  .hackathon-cards-container {
+    grid-template-columns: repeat(4, 1fr); /* 3 columns */
+  }
+}
+
+/* Medium-large screens (between 768px and 1024px) */
+@media (min-width: 1281px) and (max-width: 1600px){
     .hackathon-cards-container {
       grid-template-columns: repeat(3, 1fr); /* 3 columns */
     }
   }
-  
-  @media (max-width: 768px) { /* For landscape phones and small tablets */
-    .hackathon-cards-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    }
+
+  /* Medium-large screens (between 768px and 1024px) */
+@media (max-width: 1280px) and (min-width: 791px) {
+  .hackathon-cards-container {
+    grid-template-columns: repeat(2, 1fr); /* 3 columns */
   }
-  
-  @media (max-width: 480px) { /* For portrait phones */
-    .hackathon-cards-container {
-      grid-template-columns: 1fr; /* 1 column */
-    }
+}
+
+/* Medium screens (780px or smaller) */
+@media (max-width: 790px) {
+  .hackathon-cards-container {
+    grid-template-columns: repeat(1, 1fr); /* 2 columns */
   }
+}

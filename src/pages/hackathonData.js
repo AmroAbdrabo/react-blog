@@ -26,8 +26,9 @@ const hackathons = [
         date: "March 21, 2024 - 📍 St. Gallen",
         description: "Syngenta challenge on using cropwise API to visualize agricultural and meteorological data. Vanilla JS project with radar map on Google Maps API for weather obtained from cropwise API.",
         imageUrlLeft: "/img/lsta.png",
-        imageUrlRight: "/img/rsta.png"
-    }
+        imageUrlRight: "/img/rsta.png",
+        invisible: false
+    },
   ];
   
   export default hackathons;
